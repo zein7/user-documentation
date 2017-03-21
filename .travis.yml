@@ -8,10 +8,10 @@ python:
 install:
   - pip install tox
   - ./scripts/prepare_server.sh
-  - tox -e server runserver 0.0.0.0:8080 &
+  - tox -e server runserver 0.0.0.0:8080 > server.log 2>&1 &
   - tox -e docs
   - ./scripts/teardown_server.sh
-
+  - cat server.log
 
 deploy:
   provider: pages
