@@ -1,0 +1,10 @@
+Pillow
+requests>=2.4.1
+selenium-requests
+selenium
+Sphinx
+sphinx-rtd-theme
+sphinx-autobuild
+solar-theme
+sphinxcontrib-fulltoc
+git+git://github.com/LegoStormtroopr/sphinx-selenium-screenshots.git@master

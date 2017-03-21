@@ -11,7 +11,8 @@ install:
 script:
   - ./scripts/prepare_server.sh
   - tox -e server runserver 127.0.0.1:8080 > server.log 2>&1 &
-  - tox -e docs
+  - curl 127.0.0.1:8080
+  - tox -e docs-strict
 
 after_script:
   - ./scripts/teardown_server.sh

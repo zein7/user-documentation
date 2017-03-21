@@ -13,13 +13,19 @@ sys.path.insert(1, BASE_DIR)
 
 SECRET_KEY = 'inara+i-am-the-documentation-server-never-for-production'
 ALLOWED_HOSTS=['*']
+STATIC_ROOT = os.path.join(BASE_DIR, "static")
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 MEDIA_URL = '/media/'
 CKEDITOR_UPLOAD_PATH = 'uploads/'
 
 skip_migrations = True
 
-from aristotle_mdr.tests.settings.templates.db.sqlite import DATABASES
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, "docs.db"),
+    }
+}
 
 HAYSTACK_CONNECTIONS = {
     'default': {
@@ -49,7 +55,7 @@ if skip_migrations:  # pragma: no cover
             return True
     
         def __getitem__(self, item):
-            return "notmigrations"
+            return None
     
     MIGRATION_MODULES = DisableMigrations()
 
@@ -64,13 +70,15 @@ INSTALLED_APPS = (
 # https://docs.djangoproject.com/en/1.10/topics/testing/overview/#speeding-up-the-tests
 # We do a lot of user log in testing, this should speed stuff up.
 PASSWORD_HASHERS = (
-    'django.contrib.auth.hashers.MD5PasswordHasher',
+    'insecure.DoubleROT13PasswordHasher',
 )
 
 
 ARISTOTLE_SETTINGS['CONTENT_EXTENSIONS'] = ARISTOTLE_SETTINGS['CONTENT_EXTENSIONS'] + ['aristotle_mdr_links']
 ARISTOTLE_SETTINGS['SITE_NAME'] = "My Registry"
 ARISTOTLE_SETTINGS['SITE_INTRO'] = "Use Aristotle Metadata Registry to search for metadata..."
+ARISTOTLE_SETTINGS['SITE_BRAND'] =  '/aristotle_mdr/images/aristotle_small.png'
+
 
 ARISTOTLE_SETTINGS['BULK_ACTIONS'].update({
     'quick_pdf_download':'aristotle_mdr.forms.bulk_actions.QuickPDFDownloadForm',

@@ -13,3 +13,8 @@ Using the Aristotle API
    Using the API requires having the Aristotle-MDR API extension installed on your registry.
    If you cannot access these screens, check with your registry administrator to check
    if it is installed.
+
+
+.. screenshot::
+   :server_path: /
+   :alt: alternate text
