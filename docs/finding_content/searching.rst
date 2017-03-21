@@ -1,0 +1,19 @@
+.. Aristotle Metadata Registry User Documentation documentation master file, created by
+   sphinx-quickstart on Sat Mar 11 00:33:15 2017.
+   You can adapt this file completely to your liking, but it should at least
+   contain the root `toctree` directive.
+
+Searching for content
+=====================
+
+BasiWelcome to Aristotle!
+
+.. screenshot::
+   :server_path: /search
+   :alt: A basic search screen
+
+Here are some results
+
+.. screenshot::
+   :server_path: /search?q=person
+   :alt: A basic search screen
