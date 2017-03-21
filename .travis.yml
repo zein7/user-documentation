@@ -7,10 +7,16 @@ python:
 
 install:
   - pip install tox
+
+script:
   - ./scripts/prepare_server.sh
-  - tox -e server runserver 0.0.0.0:8080 > server.log 2>&1 &
+  - tox -e server runserver 127.0.0.1:8080 > server.log 2>&1 &
   - tox -e docs
+
+after_script:
   - ./scripts/teardown_server.sh
+
+after_failure:
   - cat server.log
 
 deploy:
