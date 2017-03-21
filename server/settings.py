@@ -32,7 +32,7 @@ HAYSTACK_CONNECTIONS = {
 
 
 MIDDLEWARE_CLASSES = (
-    'middleware.DisableCSRF',
+    'insecure.DisableCSRF',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.locale.LocaleMiddleware',
     'django.middleware.common.CommonMiddleware',
