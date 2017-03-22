@@ -20,6 +20,7 @@ Welcome to the documentation for the Aristotle Metadata Registry!
    
    meta/index.rst
    finding_content/index.rst
+   features/index.rst
    help.rst
    dashboard.rst
    creating_and_editing/index.rst
