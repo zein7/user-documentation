@@ -33,18 +33,9 @@ after_failure:
   - cat server.log
 
 deploy:
-  - provider: pages
-    local_dir: docs/_build/html
-    repo: aristotle-mdr/published-documentation
-    skip_cleanup: true
-    github_token: $GITHUB_TOKEN # Set in travis-ci.org dashboard
-    on:
-      branch: publish
-
-  - provider: pages
-    local_dir: docs/_build/html
-    repo: aristotle-mdr/user-documentation
-    skip_cleanup: true
-    github_token: $GITHUB_TOKEN # Set in travis-ci.org dashboard
-    on:
-      branch: draft
+  provider: pages
+  local_dir: docs/_build/html
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN # Set in travis-ci.org dashboard
+  on:
+    branch: draft
