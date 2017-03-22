@@ -1,12 +1,9 @@
-.. Aristotle Metadata Registry User Documentation documentation master file, created by
-   sphinx-quickstart on Sat Mar 11 00:33:15 2017.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
-
 Aristotle Metadata Registry User Documentation
 ==============================================
 
-Welcome to Aristotle!
+Welcome to the documentation for the Aristotle Metadata Registry!
+
+**This is bold text**
 
 .. screenshot::
    :server_path: /
@@ -14,7 +11,7 @@ Welcome to Aristotle!
 
 
 .. screenshot::
-   :server_path: http://data61.csiro.au
+   :server_path: /accessibility
    :alt: alternate text
 
 .. toctree::
