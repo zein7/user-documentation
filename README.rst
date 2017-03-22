@@ -154,7 +154,15 @@ Or if there is an id::
 
 For more information on cropping or making marks on screenshots see here: https://github.com/LegoStormtroopr/sphinx-selenium-screenshots/
 
-Branchs for draft and publishing
+Inserting raw HTML
+------------------
+
+Where possible, all help text should be in RST format, but when migrating content in, if it is easier in some cases to paste in plain html, it can be done like this::
+
+    .. raw:: html
+        <p> This will be rendered as <b>bold text</b> in a paragraph!!</p>
+
+Branches for draft and publishing
 ---------------------------------
 
 We have two main branches:
