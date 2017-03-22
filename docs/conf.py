@@ -25,6 +25,7 @@ screenshots_server_path = 'http://127.0.0.1:8080'
 screenshots_read_path = '/_static/screenshots'
 screenshots_save_path = os.path.abspath(os.path.join('.',screenshots_read_path[1:]))
 screenshots_logout_path = "/logout"
+screenshots_driver = os.getenv("SELENIUM_DRIVER", "selenium.webdriver.PhantomJS")
 
 # -- General configuration ------------------------------------------------
 
