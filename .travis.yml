@@ -25,6 +25,7 @@ script:
 
 after_script:
   - ./scripts/teardown_server.sh
+  - export PUBLISH_REPO=$([ "$TRAVIS_BRANCH" = "publish" ] && echo "aristotle-mdr/published-documentation" || echo "aristotle-mdr/user-documentation")
 
 after_failure:
   - cat server.log
@@ -32,7 +33,6 @@ after_failure:
 deploy:
   provider: pages
   local_dir: docs/_build/html
+  repo: $PUBLISH_REPO
   skip_cleanup: true
   github_token: $GITHUB_TOKEN # Set in travis-ci.org dashboard
-  on:
-    branch: master
