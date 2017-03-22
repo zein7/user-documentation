@@ -12,6 +12,11 @@ Welcome to Aristotle!
    :server_path: /
    :alt: alternate text
 
+
+.. screenshot::
+   :server_path: http://google.com
+   :alt: alternate text
+
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
