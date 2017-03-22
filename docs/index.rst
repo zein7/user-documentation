@@ -14,7 +14,7 @@ Welcome to Aristotle!
 
 
 .. screenshot::
-   :server_path: http://google.com
+   :server_path: http://data61.csiro.au
    :alt: alternate text
 
 .. toctree::
