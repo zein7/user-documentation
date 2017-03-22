@@ -21,6 +21,7 @@ script:
   - ./scripts/prepare_server.sh
   - ./scripts/start_server.sh
 #  - SELENIUM_DRIVER="selenium.webdriver.Firefox" tox -e docs-strict
+  - tox -e docs-strict
 
 after_script:
   - ./scripts/teardown_server.sh
@@ -30,7 +31,7 @@ after_failure:
 
 deploy:
   provider: pages
-  local_dir: docs/_build/html/
+  local_dir: docs/_build/html
   skip_cleanup: true
   github_token: $GITHUB_TOKEN # Set in travis-ci.org dashboard
   on:
