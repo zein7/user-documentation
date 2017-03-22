@@ -28,7 +28,6 @@ More after:
 
 .. screenshot:: 
    :alt: A basic search screen
-   :box: *[id="tab_names"]
    :form_data: [
       {'results-references': 'Person', '__submit__': False},
       ]

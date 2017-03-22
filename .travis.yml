@@ -11,8 +11,6 @@ install:
 script:
   - ./scripts/prepare_server.sh
   - ./scripts/start_server.sh
-  - sleep 10
-  - curl 127.0.0.1:8080
   - tox -e docs-strict
 
 after_script:
