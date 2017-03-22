@@ -28,7 +28,6 @@ More after:
 
 .. screenshot:: 
    :alt: A basic search screen
-   :clicker: a[href="#tab_names"]
    :box: *[id="tab_names"]
    :form_data: [
       {'results-references': 'Person', '__submit__': False},
