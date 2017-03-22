@@ -1,6 +1,9 @@
 Aristotle User Documentation
 ============================
 
+.. contents:: On this page
+   :local:
+
 Style guide
 -----------
 
@@ -69,7 +72,6 @@ Style guide
        .. attention:: If an edit link doesn't show on your screen, you may not have 
           permission to edit this metadata.
 
-
 How to include screenshots
 --------------------------
 
@@ -82,10 +84,25 @@ Where ever a screen shot is necessary insert a screenshot directive like this::
        :alt: alternate text   <- alt tag for the inserted image
 
 When the documentation is built, the screenshot will be generate from a test server.
-Always include a short alt tag 
+Always include a short alt tag for images and screenshots to explain them.
 
 For pages that need a user to be logged in to be logged, insert a ``:login:`` argument
 
+To put a circle 'clicker' over a link you can use::
+
+    .. screenshot::
+       :server_path: /
+       :clicker: a[href="/account/roles"]
+
+Alternatively, if it has a class use::
+
+       :clicker: div.row
+
+Or if there is an id::
+
+       :clicker: div#content
+
+For more information see here: https://github.com/LegoStormtroopr/sphinx-selenium-screenshots/
 
 Using Git for Documenters
 -------------------------
@@ -97,6 +114,12 @@ We have two main branches:
 
 All work goes onto draft and is pulled into publish when we are ready to publish a new edition
 of the documentation.
+
+Troubleshooting pages
+---------------------
+
+This editor shows RST and the HTML side-by-side, with errors, to help debug fialing pages, or pages that aren't rendering properly - 
+http://rst.ninjs.org/
 
 RST Terminology
 ---------------
