@@ -35,6 +35,5 @@ after_failure:
 deploy:
   provider: pages
   local_dir: docs/_build/html
-  repo: $([ "$TRAVIS_BRANCH" = "publish" ] && echo "aristotle-mdr/published-documentation" || echo "aristotle-mdr/user-documentation")
   skip_cleanup: true
   github_token: $GITHUB_TOKEN # Set in travis-ci.org dashboard
