@@ -8,19 +8,19 @@ python:
 install:
   - pip install tox
 
-before_script:
-  - "export DISPLAY=:99.0"
-  - "sh -e /etc/init.d/xvfb start"
-  - wget https://github.com/mozilla/geckodriver/releases/download/v0.11.1/geckodriver-v0.11.1-linux64.tar.gz
-  - mkdir geckodriver
-  - tar -xzf geckodriver-v0.11.1-linux64.tar.gz -C geckodriver
-  - export PATH=$PATH:$PWD/geckodriver
-  - sleep 1 # give xvfb some time to start
+# before_script:
+#   - "export DISPLAY=:99.0"
+#   - "sh -e /etc/init.d/xvfb start"
+#   - wget https://github.com/mozilla/geckodriver/releases/download/v0.11.1/geckodriver-v0.11.1-linux64.tar.gz
+#   - mkdir geckodriver
+#   - tar -xzf geckodriver-v0.11.1-linux64.tar.gz -C geckodriver
+#   - export PATH=$PATH:$PWD/geckodriver
+#   - sleep 1 # give xvfb some time to start
 
 script:
   - ./scripts/prepare_server.sh
   - ./scripts/start_server.sh
-  - SELENIUM_DRIVER="selenium.webdriver.Firefox" tox -e docs-strict
+#  - SELENIUM_DRIVER="selenium.webdriver.Firefox" tox -e docs-strict
 
 after_script:
   - ./scripts/teardown_server.sh
