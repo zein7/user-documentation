@@ -34,7 +34,7 @@ Style guide
 
   - Notes (blue):
  
-    Use notes for generic information
+    Use notes for generic information::
  
         .. note::
            Using the API requires having the Aristotle-MDR API extension installed on your registry.
@@ -45,7 +45,7 @@ Style guide
   - Hints (green):
 
     Use hints to show a user something that might not be obvious but will make doing actions
-    quicker or easier.
+    quicker or easier.::
 
         .. hint::
            You can access the quicksearch bar by hitting 'Alt+Q' on Windows or 'Cmd+Q'
@@ -69,7 +69,7 @@ Style guide
 
     Like so::
         
-       .. attention:: If an edit link doesn't show on your screen, you may not have 
+       .. warning:: If an edit link doesn't show on your screen, you may not have 
           permission to edit this metadata.
 
 Inserting links
@@ -84,7 +84,7 @@ A link to another section can be added with the ``:doc`` directive, in side text
 
 If a file ``user_help/index.rst`` exists, then a link will be added, with the text of the title of that page added in. This means, that if the title changes the link will too.
 
-If a custom text for the link is needed, use angle brackets (``<``  and ``>``) around the link with the custom text before hand.
+If a custom text for the link is needed, use angle brackets (``<``  and ``>``) around the link with the custom text before hand.::
 
     :doc:`my custom text </user_help/index>`
  
