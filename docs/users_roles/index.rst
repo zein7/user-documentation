@@ -11,16 +11,16 @@ All members of a workgroup can participate in workgroup conversations.
 .. note:: permissions are non-hierarchical, so to get all permissions a member may need to be in multiple groups.
 
 *	Vicky Viewer - Can view content in workgroup (can't submit content to work group) 
-Viewers are only able to view content in a workgroup. They may also participate in workgroup conversations.
+    Viewers are only able to view content in a workgroup. They may also participate in workgroup conversations.
 
 *	Stewie Submitter - Can submit new things in workgroup
-You can create and edit content in this workgroup, but cannot edit content that has been progressed to a 'locked' state by a registrar. They can view all content in a workgroup and can set the flag that an item is ready for review by a registrar.
+    You can create and edit content in this workgroup, but cannot edit content that has been progressed to a 'locked' state by a registrar. They can view all content in a workgroup and can set the flag that an item is ready for review by a registrar.
 
 *	Suzie Steward - Can edit things in workgroup that are registered
-Are trusted editors that can create and edit content in this workgroup and can edit content that has been progressed to a 'locked' state by a registrar. 
+    Are trusted editors that can create and edit content in this workgroup and can edit content that has been progressed to a 'locked' state by a registrar. 
 
 *	Mandy Manager - Can add new people to workgroup and control discussions
-Workgroup managers can add and remove users from a workgroup, delete workgroup conversations and retire a workgroup. They can also create and edit content that has been not progressed to a locked state.
+    Workgroup managers can add and remove users from a workgroup, delete workgroup conversations and retire a workgroup. They can also create and edit content that has been not progressed to a locked state.
 
 Registration Authority
 ----------------------
