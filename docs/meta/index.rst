@@ -17,13 +17,6 @@ attention to important pieces of information.
 Symbols used in screenshots
 ---------------------------
 
-
-.. screenshot::
-   :server_path: /search
-   :alt: A search interface with a highlighted button
-   :clicker: a
-   :form_data: [{'q': 'Search term', '__submit__' : True }]
-
 Screenshots in this document are based on the default theme for the Aristotle Metadata Registry.
 Depending on customisations made to your registry, some screens may look different with controls in
 different locations or with more information from customised metadata.
