@@ -3,7 +3,7 @@ Aristotle Metadata Registry User Documentation
 
 Welcome to the documentation for the Aristotle Metadata Registry!
 
-**This is bold text**
+
 
 .. screenshot::
    :server_path: /
@@ -21,6 +21,7 @@ Welcome to the documentation for the Aristotle Metadata Registry!
    meta/index.rst
    finding_content/index.rst
    features/index.rst
+   users_roles/index.rst
    help.rst
    dashboard.rst
    creating_and_editing/index.rst
