@@ -50,7 +50,6 @@ MIDDLEWARE_CLASSES = MIDDLEWARE_CLASSES = (
     'aristotle_mdr.contrib.redirect.middleware.RedirectMiddleware',
 )
 
-ROOT_URLCONF = 'possum_mdr.urls'
 WSGI_APPLICATION = 'heroku.wsgi.application'
 
 # Database

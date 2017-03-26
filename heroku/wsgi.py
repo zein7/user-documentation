@@ -11,7 +11,7 @@ import os
 import sys
 
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "heroku.settings")
-sys.path.insert(1, os.path.dirname(os.path.dirname(__file__)))
+sys.path.insert(1, os.path.dirname(__file__))
 
 print(sys.path)
 
