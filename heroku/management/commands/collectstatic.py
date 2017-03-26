@@ -28,31 +28,10 @@ class Command(BaseCommand):
         )
 
     def handle(self, *args, **options):
-        compile_dir = options.get('output_path', mkdtemp())
-        print(compile_dir)
-
-        with override_settings(
-            # STATIC_ROOT = compile_dir,
-            # OUTPUT_DIR = compile_dir,
-            # DEBUG = False,  # We need this off for manifest to work
-            # # STATIC_PRECOMPILER_ROOT = compile_dir,
-            # # STATICFILES_DIRS = tuple(
-            # #     list(settings.STATICFILES_DIRS) + [compile_dir]
-            # # ),
-            # STATICFILES_FINDERS = (
-            #     'django.contrib.staticfiles.finders.FileSystemFinder',
-            #     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
-            #     'static_precompiler.finders.StaticPrecompilerFinder',
-            # ),
-            # STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.ManifestStaticFilesStorage',
-        ):
-            # static_precompiler.settings.STATIC_ROOT = compile_dir
-            # static_precompiler.settings.ROOT = compile_dir
-            # print('Preparing to compile')
-            call_command('compilestatic')
-            # num_files = sum([len(files) for r, d, files in os.walk(compile_dir)])
-            # print('Compiled - %s files' % num_files)
-            call_command('base_collectstatic', '--noinput', verbosity=3)
+        call_command('compilestatic')
+        call_command('base_collectstatic', '--noinput')
+        call_command('loaddata', '--noinput', 'fixtures/iso_metadata.json')
+        call_command('loaddata', '--noinput', 'fixtures/test_metadata.json')
 
         print('All done!')
 
