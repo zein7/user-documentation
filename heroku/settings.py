@@ -3,9 +3,8 @@
 Django settings for possum_mdr project.
 
 """
-from aristotle_mdr.required_settings import *
-from aristotle_glossary.settings import CKEDITOR_CONFIGS
-# from aristotle_cloud.settings import *
+from server.settings import *
+
 BASE_DIR = os.environ.get(
     'aristotlemdr__BASE_DIR',
     os.path.join(os.path.dirname(os.path.dirname(__file__)), 'site')
@@ -86,6 +85,11 @@ HAYSTACK_CONNECTIONS = {
     },
 }
 HAYSTACK_SIGNAL_PROCESSOR = 'aristotle_mdr.contrib.help.signals.AristotleHelpSignalProcessor'
+
+INSTALLED_APPS = (
+    'heroku',
+) + INSTALLED_APPS
+
 
 
 DEBUG = os.environ.get('aristotlemdr__DEBUG', False) == 'True'
