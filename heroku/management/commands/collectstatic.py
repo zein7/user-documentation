@@ -28,6 +28,7 @@ class Command(BaseCommand):
         )
 
     def handle(self, *args, **options):
+        call_command('migrate', '--syncdb')
         call_command('compilestatic')
         call_command('base_collectstatic', '--noinput')
         print("Emptying Database")
