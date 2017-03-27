@@ -1,8 +1,14 @@
-Users of the registry
-=====================
+Roles within the registry
+=========================
+
+There are many users of the metadata registry, and all of them have different roles when it comes to maintaining the relevance and quality of metadata in the registry. 
 
 Workgroup
 ---------
+
+*What is a Workgroup?*
+
+It’s a team within the Metadata Registry that brings together stewards and submitters into a workspace where they can collaborate on the production of metadata for a certain purpose. 
 
 Below is a list of members in this workgroup, every person listed on this page can view content in this workgroup. 
 Additional permissions are listed with each group. Permissions only apply to specific workgroup, so a user may be a manager in one group but an editor in another.
@@ -10,26 +16,36 @@ All members of a workgroup can participate in workgroup conversations.
 
 .. note:: permissions are non-hierarchical, so to get all permissions a member may need to be in multiple groups.
 
-*   Vicky Viewer - Can view content in workgroup (can't submit content to work group) 
-    Viewers are only able to view content in a workgroup. They may also participate in workgroup conversations.
+*   **Viewer** - These are read-only users. They are people or groups of people who can view the metadata, and can contribute to        discussions, but they can’t edit content. Viewers can see the metadata before it is published, so they may be proof-readers, stakeholders of the metadata, or people who are required to provide feedback on the metadata.
 
-*   Stewie Submitter - Can submit new things in workgroup
-    You can create and edit content in this workgroup, but cannot edit content that has been progressed to a 'locked' state by a registrar. They can view all content in a workgroup and can set the flag that an item is ready for review by a registrar.
+        A viewer could be a doctor or health staff who are monitoring a new metadata standard and are collecting data about a newly   identified disease. 
 
-*   Suzie Steward - Can edit things in workgroup that are registered
-    Are trusted editors that can create and edit content in this workgroup and can edit content that has been progressed to a 'locked' state by a registrar. 
+*   **Submitter** - This is someone who can create metadata within the **registry**. They submit content to a **workgroup** where it can be reviewed by **stewards**. These people are trained to understand the requirements for good quality metadata and work closely with stakeholders to transfer requirements into metadata.
 
-*   Mandy Manager - Can add new people to workgroup and control discussions
-    Workgroup managers can add and remove users from a workgroup, delete workgroup conversations and retire a workgroup. They can also create and edit content that has been not progressed to a locked state.
+        A submitter could be a health researcher who understand the field of research and works to document it. 
+
+*   **Steward** - These are the people responsible for the metadata, helping to maintain its quality. Within Aristotle they are the only ones who can edit content once it becomes “locked” by a **Registrar**. 
+
+        A steward may be staff working with the people maintaining the metadata registry to ensure the quality of the metadata registry. They could also be Information Analysts or Data Architects. 
+
+*   **Manager** - This is the person who oversees the operation and membership of a **workgroup**. They can add users to a **workgroup** and assign them roles. Unless a manager grants themselves additional roles, such as **steward** or **submitter** roles, they do not have the rights to edit items. They can archive a **workgroup** to close it and prevent new material from being added. They can also close or remove discussions within a **workgroup**. 
 
 Registration Authority
 ----------------------
 
-The organization responsible for setting the procedures, administering, and maintaining an MDR
+*What is the Registration Authority?*
 
-*   Reggie Registrar - Can register content
+One or more people who are trusted and have the knowledge and responsibility of enforcing the correctness of metadata. 
+
+*   **Registrar** - A person who acts on behalf of the **registration authority** who endorses metadata as meeting a set of requirements for use. Within the **registry**, they can endorse metadata independently or respond a request for review from other users.
+
+        A registrar would be someone working on behalf of a standards body, like representatives of government agencies who endorse national metadata standards. 
 
 Registry
 --------
 
-*   Alice Administrator - Controls the registry, adds users, adds workgroups, adds registration authorities
+*What is the Registry?*
+
+A running copy of Aristotle.
+
+*   **Administrator** - This is the person who can add, remove, and deactivate users. They can add and remove **workgroups**, **registration authorities**. The administrator can assign people to be **managers**, and they can carry out all the additional roles assigned to the different users of the **registry**. 
