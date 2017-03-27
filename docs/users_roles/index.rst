@@ -14,7 +14,7 @@ Below is a list of members in this workgroup, every person listed on this page c
 Additional permissions are listed with each group. Permissions only apply to specific workgroup, so a user may be a manager in one group but an editor in another.
 All members of a workgroup can participate in workgroup conversations.
 
-.. note:: permissions are non-hierarchical, so to get all permissions a member may need to be in multiple groups.
+.. note:: Permissions are non-hierarchical, so to get all permissions a member may need to have multiple roles.
 
 *   **Viewer** - These are read-only users. They are people or groups of people who can view the metadata, and can contribute to        discussions, but they can’t edit content. Viewers can see the metadata before it is published, so they may be proof-readers, stakeholders of the metadata, or people who are required to provide feedback on the metadata.
 
