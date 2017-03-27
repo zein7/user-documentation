@@ -31,8 +31,8 @@ class Command(BaseCommand):
         call_command('compilestatic')
         call_command('base_collectstatic', '--noinput')
         call_command('flush', '--noinput')
-        call_command('loaddata', '--noinput', 'fixtures/iso_metadata.json')
-        call_command('loaddata', '--noinput', 'fixtures/test_metadata.json')
+        call_command('loaddata', 'fixtures/iso_metadata.json')
+        call_command('loaddata', 'fixtures/test_metadata.json')
 
         print('All done!')
 
