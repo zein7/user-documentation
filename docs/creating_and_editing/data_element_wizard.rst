@@ -1,5 +1,5 @@
-Using wizards
-=============
+Using wizards to link metadata to create a data element
+=======================================================
 
 Before
 
