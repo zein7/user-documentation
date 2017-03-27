@@ -41,7 +41,7 @@ HAYSTACK_CONNECTIONS = {
 
 
 MIDDLEWARE_CLASSES = (
-    'insecure.DisableCSRFMiddleware',
+    'server.insecure.DisableCSRFMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.locale.LocaleMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -73,7 +73,7 @@ INSTALLED_APPS = (
 # https://docs.djangoproject.com/en/1.10/topics/testing/overview/#speeding-up-the-tests
 # We do a lot of user log in testing, this should speed stuff up.
 PASSWORD_HASHERS = (
-    'insecure.DoubleROT13PasswordHasher',
+    'server.insecure.DoubleROT13PasswordHasher',
 )
 
 
