@@ -30,7 +30,9 @@ class Command(BaseCommand):
     def handle(self, *args, **options):
         call_command('compilestatic')
         call_command('base_collectstatic', '--noinput')
+        print("Emptying Database")
         call_command('flush', '--noinput')
+        print("Loading fixtures")
         call_command('loaddata', 'fixtures/iso_metadata.json')
         call_command('loaddata', 'fixtures/test_metadata.json')
 
