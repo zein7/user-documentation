@@ -15,12 +15,6 @@ class Command(BaseCommand):
 
     def add_arguments(self, parser):
         super(Command, self).add_arguments(parser)
-        # parser.add_argument('-O',
-        #     "--output_path",
-        #     metavar="output_path",
-        #     default=False,
-        #     help="Path to the Django file storage object (e.g. django.core.files.storage.default_storage).",
-        # )
         parser.add_argument(
             "--noinput",
             default=False,
@@ -28,7 +22,7 @@ class Command(BaseCommand):
         )
 
     def handle(self, *args, **options):
-        call_command('migrate', '--syncdb')
+        call_command('migrate', '--run-syncdb')
         call_command('compilestatic')
         call_command('base_collectstatic', '--noinput')
         print("Emptying Database")
