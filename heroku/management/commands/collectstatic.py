@@ -28,8 +28,8 @@ class Command(BaseCommand):
         print("Emptying Database")
         call_command('flush', '--noinput')
         print("Loading fixtures")
-        call_command('loaddata', 'fixtures/iso_metadata.json')
-        call_command('loaddata', 'fixtures/test_metadata.json')
+        call_command('loaddata', 'server/fixtures/iso_metadata.json')
+        call_command('loaddata', 'server/fixtures/test_metadata.json')
 
         print('All done!')
 
