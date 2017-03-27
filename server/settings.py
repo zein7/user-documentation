@@ -18,7 +18,10 @@ MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 MEDIA_URL = '/media/'
 CKEDITOR_UPLOAD_PATH = 'uploads/'
 
-skip_migrations = True
+skip_migrations = os.environ.get(
+    'ARISTOTLE_DEV_SKIP_MIGRATIONS',
+    False
+) is not False
 
 DATABASES = {
     'default': {
