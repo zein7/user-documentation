@@ -8,4 +8,4 @@ whitenoise
 
 aristotle-metadata-registry>=1.5.0
 
- 
+  
