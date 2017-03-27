@@ -28,10 +28,9 @@ class Command(BaseCommand):
         )
 
     def handle(self, *args, **options):
-        if os.environ.get('aristotlemdr__RUN_MIGRATE', False) == 'True':
-            call_command('migrate', '--noinput')
         call_command('compilestatic')
         call_command('base_collectstatic', '--noinput')
+        call_command('flush', '--noinput')
         call_command('loaddata', '--noinput', 'fixtures/iso_metadata.json')
         call_command('loaddata', '--noinput', 'fixtures/test_metadata.json')
 
