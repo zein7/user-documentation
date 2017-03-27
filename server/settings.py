@@ -88,7 +88,7 @@ ARISTOTLE_SETTINGS['BULK_ACTIONS'].update({
     'add_slots': 'aristotle_mdr.contrib.slots.forms.BulkAssignSlotsForm',
 })
 
-ROOT_URLCONF = 'urls'
+ROOT_URLCONF = 'server.urls'
 
 TEMPLATES = [
     {
