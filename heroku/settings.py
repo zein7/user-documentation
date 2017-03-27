@@ -89,7 +89,7 @@ INSTALLED_APPS = (
 
 
 DEBUG = False # os.environ.get('aristotlemdr__DEBUG', False) == 'True'
-print('Debug is,' DEBUG)
+print('Debug is', DEBUG)
 ALLOWED_HOSTS = os.environ.get('aristotlemdr__ALLOWED_HOSTS').split(',')
 
 
