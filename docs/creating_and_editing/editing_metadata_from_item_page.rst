@@ -48,7 +48,7 @@ the dialog to force the editor to take up the whole window.
    :clicker: a i.fa.fa-expand
 
 
-When exapnded, the editor now takes up the whole screen, as shown below:
+When expanded, the editor now takes up the whole screen, as shown below:
 
 .. screenshot:: 
    :server_path: /item/18/edit
