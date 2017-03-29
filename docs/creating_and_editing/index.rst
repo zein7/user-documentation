@@ -15,3 +15,4 @@ In this section
    editing_metadata_from_item_page.rst
    editing_metadata_using_admin.rst
    data_element_wizard.rst
+   adding_new_info_with_slots.rst
