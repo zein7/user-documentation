@@ -18,9 +18,9 @@ the number of metadata items of that type.
 
 .. screenshot::
    :server_path: /browse
-   :alt: A basic search screen
+   :alt: A basic browse screen
 
-The first level browsing screen
+The first level browsing screen shows a list of all metadata types and the component they are defined in.
 
 Browsing for metadata by extension
 ----------------------------------
