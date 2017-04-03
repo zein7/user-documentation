@@ -10,10 +10,6 @@ Welcome to the documentation for the Aristotle Metadata Registry!
    :alt: alternate text
 
 
-.. screenshot::
-   :server_path: /accessibility
-   :alt: alternate text
-
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
@@ -22,7 +18,6 @@ Welcome to the documentation for the Aristotle Metadata Registry!
    finding_content/index.rst
    features/index.rst
    users_roles/index.rst
-   help.rst
    dashboard.rst
    creating_and_editing/index.rst
    api/index.rst
