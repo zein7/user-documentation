@@ -1,0 +1,44 @@
+Creating New Information with Slots
+===================================
+
+.. note:: Slots can only be created when the Aristotle Slots add-on is installed.
+
+Slots are a ways of adding extra detail to metadata beyond what's available in the standard or Aristotle. 
+Allows you to add extra context specific to a registry that describes a particular use. 
+
+The following steps are ways to capture this infomation for an existing metadata item. 
+
+.. note:: Only users with editing privledges for that metadata can create and edit slots for it.
+
+To get started
+
+.. screenshot:: 
+   :server_path: /item/18
+   :alt: Screenshot of a person metadata item
+   :login: {'url': '/login', "username": "suzie", "password": "Submitter"}
+   :clicker: i.fa-pencil-square-o
+   :browser_height: 733
+   
+   browser.find_element_by_css_selector('i.fa-pencil-square-o').click()
+
+.. screenshot:: 
+   :server_path: /item/18/edit
+   :alt: Edit screen
+   :clicker: a[href="#tab_slots"]
+   :browser_height: 733
+
+   browser.find_element_by_css_selector('a[href="#tab_slots"]').click()
+
+.. screenshot:: 
+   :alt: Edit screen
+   :browser_height: 733
+   :form_data: [
+      {'slots-0-name':"plural",'slots-0-value':"people", '__submit__': False}
+      ]
+
+.. screenshot:: 
+   :alt: Edit screen
+   :browser_height: 733
+   :form_data: [
+      {'slots-0-name':"plural",'slots-0-value':"people", '__submit__': True}
+      ]

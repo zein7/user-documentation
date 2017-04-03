@@ -1,5 +1,5 @@
-Using wizards
-=============
+Using wizards to create metadata
+================================
 
 Before
 

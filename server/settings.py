@@ -18,7 +18,10 @@ MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 MEDIA_URL = '/media/'
 CKEDITOR_UPLOAD_PATH = 'uploads/'
 
-skip_migrations = True
+skip_migrations = os.environ.get(
+    'ARISTOTLE_DEV_SKIP_MIGRATIONS',
+    False
+) is not False
 
 DATABASES = {
     'default': {
@@ -38,7 +41,7 @@ HAYSTACK_CONNECTIONS = {
 
 
 MIDDLEWARE_CLASSES = (
-    'insecure.DisableCSRFMiddleware',
+    'server.insecure.DisableCSRFMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.locale.LocaleMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -70,7 +73,7 @@ INSTALLED_APPS = (
 # https://docs.djangoproject.com/en/1.10/topics/testing/overview/#speeding-up-the-tests
 # We do a lot of user log in testing, this should speed stuff up.
 PASSWORD_HASHERS = (
-    'insecure.DoubleROT13PasswordHasher',
+    'server.insecure.DoubleROT13PasswordHasher',
 )
 
 
@@ -85,7 +88,7 @@ ARISTOTLE_SETTINGS['BULK_ACTIONS'].update({
     'add_slots': 'aristotle_mdr.contrib.slots.forms.BulkAssignSlotsForm',
 })
 
-ROOT_URLCONF = 'urls'
+ROOT_URLCONF = 'server.urls'
 
 TEMPLATES = [
     {
