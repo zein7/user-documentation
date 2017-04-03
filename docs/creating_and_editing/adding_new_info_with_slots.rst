@@ -40,7 +40,7 @@ The following steps are ways to capture this infomation for an existing metadata
       {'slots-0-name':"plural",'slots-0-value':"people", '__submit__': False}
       ]
 
-4. Once saved, the slots for the metadata show at in the page in the table under the section titled "Additional attributes".
+4. Once saved, the slots for the metadata show at in the page in the table under the section titled "Additional attributes" along with the number of metadata items with similar values.
 
 .. screenshot:: 
    :alt: Edit screen
