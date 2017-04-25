@@ -20,8 +20,8 @@ install:
 script:
   - ./scripts/prepare_server.sh
   - ./scripts/start_server.sh
-#  - SELENIUM_DRIVER="selenium.webdriver.Firefox" tox -e docs-strict
-  - tox -e docs-strict
+  - SELENIUM_DRIVER="selenium.webdriver.Chrome" tox -e docs-strict
+#  - tox -e docs-strict
 
 after_script:
   - ./scripts/teardown_server.sh
@@ -54,3 +54,10 @@ deploy:
     github_token: $GITHUB_TOKEN # Set in travis-ci.org dashboard
     on:
       branch: draft
+
+addons:
+  apt:
+    sources:
+      - google-chrome
+    packages:
+      - google-chrome-stable
