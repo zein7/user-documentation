@@ -1,5 +1,6 @@
 # Lets run on the new infrastructure
 sudo: false
+dist: trusty
 
 language: python
 python:
@@ -57,5 +58,7 @@ deploy:
 
 addons:
   apt:
+    sources:
+      - google-chrome
     packages:
       - google-chrome-stable
