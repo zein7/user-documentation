@@ -57,10 +57,5 @@ deploy:
 
 addons:
   apt:
-    sources:
-      - google-chrome
     packages:
-      - libfontconfig1
-      - libstdc++6
-      - lsb-base
       - google-chrome-stable
