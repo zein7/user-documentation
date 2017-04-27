@@ -7,5 +7,6 @@ sphinx-rtd-theme
 sphinx-autobuild
 solar-theme
 sphinxcontrib-fulltoc
+sphinxcontrib-googleanalytics
 sphinxcontrib-rawfiles
 git+git://github.com/LegoStormtroopr/sphinx-selenium-screenshots.git@master
