@@ -42,12 +42,9 @@ extensions = [
     'sphinx.ext.githubpages',
     'selenium_screenshots.screener',
     'sphinxcontrib.fulltoc',
-    'sphinxcontrib.googleanalytics'
 ]
 
 # rawfiles = ['CNAME']
-
-googleanalytics_id = "UA-75504244-2"
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
