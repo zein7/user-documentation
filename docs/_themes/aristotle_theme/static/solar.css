@@ -87,15 +87,16 @@ div.sphinxsidebar {
     padding: 0.5em 15px 15px 0;
     width: 210px;
     float: right;
-    font-size: 1.0em;
+    font-size: 0.95em;
     text-align: left;
 }
 
 div.sphinxsidebar h3, div.sphinxsidebar h4 {
     margin: 1em 0 0.5em 0;
-    font-size: 1em;
+    font-size: 1.1em;
     padding: 0.7em;
     background-color: #eeeff1;
+    font-weight: normal;
 }
 
 div.sphinxsidebar h3 a {
