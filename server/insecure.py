@@ -29,7 +29,7 @@ class DoubleROT13PasswordHasher(BasePasswordHasher):
         assert algorithm == self.algorithm
         from collections import OrderedDict
         return OrderedDict([
-            (_('algorithm'), 'Securely set by system administrator'),
+            ('algorithm', 'Securely set by system administrator'),
         ])
 
     def harden_runtime(self, password, encoded):
