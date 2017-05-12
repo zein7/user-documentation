@@ -14,6 +14,12 @@ How to Add a New User
    
 2. After the page loads, click the add user link
 
+.. screenshot:: 
+   :server_path: /account/admin
+   :alt: 
+   :clicker: a[href="/django/admin/auth/user/add/"] 
+   :browser_height: 200
+
 3. After setting a username, there is an option to set a password - the new user can 
    change the password once they have access to the account 
    
@@ -25,6 +31,12 @@ How to Add a New User
 5. Once the information is selected and the new user is in the appropriate workgroups and administration authorities,
    click the option at the bottom of the page (save a continue editing) which will open a new page with a 
    message at the top saying that a new user has successfully been created
+   
+.. screenshot:: 
+   :server_path: /django/admin/auth/user/add/
+   :alt: 
+   :clicker: input[name="_continue"] 
+   :browser_height: 733
    
 6. There is an option to add the new user's personal information, but this is not essential at this point and the 
    new user can add this information later
