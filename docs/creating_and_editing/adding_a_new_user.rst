@@ -6,13 +6,11 @@ How to Add a New User
 1. To get started, click on Administrator Tools at the bottom of the left menu
 
 .. screenshot:: 
-   :server_path: /item/18
-   :alt: Screenshot of a person metadata item
-   :login: {'url': '/login', "username": "suzie", "password": "Submitter"}
-   :clicker: i.fa-pencil-square-o
+   :server_path: /account/home
+   :alt: 
+   :login: {'url': '/login', "username": "alice", "password": "Administrator"}
+   :clicker: #dashboad-nav a[href="/account/admin"]
    :browser_height: 733
-   
-   browser.find_element_by_css_selector('i.fa-pencil-square-o').click()
    
 2. After the page loads, click the add user link
 
