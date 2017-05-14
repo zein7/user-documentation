@@ -1,5 +1,5 @@
 import os, sys
-user_doc_path = os.path.abspath('../../../user-documentation')
+user_doc_path = os.path.abspath('../../')
 print(user_doc_path)
 sys.path.insert(0, user_doc_path)
 
