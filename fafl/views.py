@@ -14,6 +14,7 @@ from .tools import Command, write_file
 
 from django.shortcuts import render
 from django.http import HttpResponse
+from django.template.loader import render_to_string
 
 config_path = 'conf'
 
@@ -25,10 +26,23 @@ def build(timeout=10, build_dir=None, source_dir=None):
     build_path = build_dir #join('repos', 'build/html')
     command = 'sphinx-build -c ' + config_path + ' ' + source_path + ' ' + build_path
     print(command)
-    
-    process = Command(command)
-    process.run(timeout=timeout)
-    return True
+
+    import subprocess, threading
+    # process = subprocess.Popen(self.command, shell=True)
+    p = subprocess.Popen(command, shell=True, stdout=subprocess.PIPE,
+                              stderr=subprocess.PIPE,
+                              stdin=subprocess.PIPE)
+    p.wait()
+    out, err = p.communicate()
+    code = p.returncode
+    print(out)
+    print(err)
+    print(code)
+    print("-------------------------------")
+
+    # process = Command(command)
+    # process.run(timeout=timeout)
+    return (code, out, err)
 
 filename = 'index'
 base_dir = '/tmp/fafl/'
@@ -48,12 +62,18 @@ def edit(request):
     mk_if_not_exists(branch_html_dir)
     
     branch_source_path = os.path.join(branch_source_dir, 'index.rst')
+    branch_build_path = os.path.join(branch_html_dir, 'index.html')
 
     rst=""
     if request.method == 'POST':
         rst = request.POST['code']
         write_file(branch_source_path, request.POST['code'])
-        build(source_dir=branch_source_dir, build_dir=branch_html_dir)
+        code, out, err = build(source_dir=branch_source_dir, build_dir=branch_html_dir)
+        if code != 0:
+            write_file(
+                branch_build_path, 
+                render_to_string('err.html', context={'err':err, 'out':out})
+            )
 
     return render(request, 'edit.html', context={'filename':filename, 'rst':rst})
 
