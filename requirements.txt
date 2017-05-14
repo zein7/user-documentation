@@ -7,4 +7,6 @@ whoosh
 lesscpy
 whitenoise
 
+-r requirements.docs.txt
+
 aristotle-metadata-registry>=1.5.2
