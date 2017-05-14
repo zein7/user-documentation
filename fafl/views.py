@@ -66,7 +66,7 @@ def raw(request, fn='index.html'):
     print(os.listdir("/tmp/fafl/build/"))
     print(os.listdir("/tmp/fafl/build/_static"))
     print(os.listdir("/tmp/fafl/build/_static/screenshots"))
-    prin("===================\n\n\n")
+    print("===================\n\n\n")
     doc = open(os.path.join(base_dir, 'build', fn),'rb')
 
     content_type, encoding= mimetypes.guess_type(fn)
