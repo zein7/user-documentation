@@ -186,14 +186,14 @@ Troubleshooting pages
 If pages aren't updating, review the `publishing tool`_, it should show the most recent build and there should be lots of green ticks. If there are red crosses, the build failed. Skip to the bottom of the page and it will tell you how, or why, it failed. - 
 
 
-This `RST editor`_ shows RST and the HTML side-by-side, with errors, to help debug fialing pages, or pages that aren't rendering properly.
+We have a `live updating editor`_  that shows RST and the HTML side-by-side, with errors, to help debug failing pages, or pages that aren't rendering properly.
 
 There is a `server specifically for documentation purposes`_ that is rebuilt with
 every change. Logins for users and their credentials are in the
 `server fixtures`_.
 
 .. _publishing tool: https://travis-ci.org/aristotle-mdr/user-documentation/
-.. _RST editor: http://rst.ninjs.org/
+.. _live updating editor: https://aristotle-user-doc.herokuapp.com/fafl/
 .. _server specifically for documentation purposes: https://aristotle-user-doc.herokuapp.com
 .. _server fixtures: https://github.com/aristotle-mdr/user-documentation/blob/draft/server/fixtures/test_metadata.json
 
