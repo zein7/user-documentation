@@ -1,9 +1,6 @@
 import os
-import re
 import json
-from os.path import isdir, isfile, join, splitext
 import urllib
-import string
 from shutil import copyfile, rmtree
 import traceback
 import mimetypes
