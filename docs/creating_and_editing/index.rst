@@ -16,3 +16,5 @@ In this section
    editing_metadata_using_admin.rst
    data_element_wizard.rst
    adding_new_info_with_slots.rst
+   adding_a_new_user.rst
+   how_a_user_can_change_their_info.rst

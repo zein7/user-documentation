@@ -4,6 +4,13 @@ Aristotle User Documentation
 .. contents:: On this page
    :local:
 
+Previewing the registry
+-----------------------
+
+A preview registry is available at https://aristotle-user-doc.herokuapp.com/. This site is rebuidl everytime a change is made to this code and documentation.
+
+User accounts for the site are available in this file: https://github.com/aristotle-mdr/user-documentation/blob/draft/server/fixtures/test_metadata.json
+
 Style guide
 -----------
 
@@ -206,3 +213,4 @@ Directive
 
 RST
     Restructured Text - the text format we use to build our documentation
+
