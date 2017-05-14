@@ -141,6 +141,7 @@ div.bodywrapper {
           </div>
 
         <form id="myform" action="" method="post">
+          {% csrf_token %}
           <textarea id="code" name="code">{{ rst }}</textarea>
           <br>
 
