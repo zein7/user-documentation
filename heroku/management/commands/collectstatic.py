@@ -30,7 +30,7 @@ class Command(BaseCommand):
         print("Loading fixtures")
         call_command('loaddata', 'server/fixtures/iso_metadata.json')
         call_command('loaddata', 'server/fixtures/test_metadata.json')
-        call_command('rebuild_index')
+        call_command('rebuild_index', '--noinput')
 
         print('All done!')
 
