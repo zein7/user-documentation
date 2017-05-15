@@ -36,6 +36,7 @@ def build(timeout=10, build_dir=None, source_dir=None):
     p.wait()
     out, err = p.communicate()
     code = p.returncode
+    p.kill()
 
     return (code, out, err)
 
