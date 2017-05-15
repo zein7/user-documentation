@@ -24,24 +24,19 @@ def build(timeout=10, build_dir=None, source_dir=None):
     config_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'conf')
     source_path = source_dir #join('repos', 'source')
     build_path = build_dir #join('repos', 'build/html')
-    command = 'sphinx-build -c ' + config_path + ' ' + source_path + ' ' + build_path
-    print(command)
+    command = ['sphinx-build', '-c', config_path, source_path, build_path]
 
     import subprocess, threading
-    # process = subprocess.Popen(self.command, shell=True)
-    p = subprocess.Popen(command, shell=True, stdout=subprocess.PIPE,
-                              stderr=subprocess.PIPE,
-                              stdin=subprocess.PIPE)
+
+    p = subprocess.Popen(command, close_fds=True,
+        stdout=subprocess.PIPE,
+        stderr=subprocess.PIPE,
+        stdin=subprocess.PIPE
+    )
     p.wait()
     out, err = p.communicate()
     code = p.returncode
-    print(out)
-    print(err)
-    print(code)
-    print("-------------------------------")
 
-    # process = Command(command)
-    # process.run(timeout=timeout)
     return (code, out, err)
 
 filename = 'index'

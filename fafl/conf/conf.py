@@ -14,3 +14,7 @@ html_theme_path = [os.path.join(user_doc_path, 'docs', '_themes')]
 import solar_theme
 
 html_theme = 'aristotle_theme'
+
+filelist = [ f for f in os.listdir(screenshots_save_path) if f.endswith(".png") ]
+for f in filelist:
+    os.remove(os.path.join(screenshots_save_path,f))
