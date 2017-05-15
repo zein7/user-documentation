@@ -31,8 +31,8 @@ and then the definition of the workgroup, which let's people know what the role 
    :server_path: /django/admin/aristotle_mdr/workgroup/add/
    :crop: [0,700,1200,2100]
    
-5. Once done, click "save and continue editing" or, "save" to finish creating your new workgroup, and
-you will recieve a message at the top of your screen saying that you have sucessfully created a new workgroup. 
+5. Once done, click "save and continue editing" or "save" to finish creating your new workgroup, 
+you will then recieve a message at the top of your screen saying that you have sucessfully created a new workgroup 
 
 .. screenshot::
    :server_path: /django/admin/aristotle_mdr/workgroup/add/
