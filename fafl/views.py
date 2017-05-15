@@ -26,17 +26,15 @@ def build(timeout=10, build_dir=None, source_dir=None):
     build_path = build_dir #join('repos', 'build/html')
     command = ['sphinx-build', '-c', config_path, source_path, build_path]
 
-    import subprocess, threading
+    import subprocess
 
-    p = subprocess.Popen(command, close_fds=True,
+    p = subprocess.Popen(command,
         stdout=subprocess.PIPE,
-        stderr=subprocess.PIPE,
-        stdin=subprocess.PIPE
+        stderr=subprocess.PIPE
     )
     p.wait()
     out, err = p.communicate()
     code = p.returncode
-    p.kill()
 
     return (code, out, err)
 
