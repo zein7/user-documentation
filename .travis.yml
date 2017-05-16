@@ -21,7 +21,7 @@ script:
   # - SELENIUM_DRIVER="selenium.webdriver.Chrome" tox -e docs-strict
   - tox -e docs-strict
   - tox -e docs-text-index
-  - cp -r ./docs/_build/text/ ./docs/_build/html/_sources
+  - cp -r docs/_build/text/* docs/_build/html/_sources
 
 after_script:
   - ./scripts/teardown_server.sh
