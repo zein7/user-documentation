@@ -27,6 +27,11 @@ screenshots_save_path = os.path.abspath(os.path.join('.',screenshots_read_path[1
 screenshots_logout_path = "/logout"
 screenshots_driver = os.getenv("SELENIUM_DRIVER", "selenium.webdriver.PhantomJS")
 
+# Clean up past screenshots
+filelist = [ f for f in os.listdir(screenshots_save_path) if f.endswith(".png") ]
+for f in filelist:
+    os.remove(os.path.join(screenshots_save_path,f))
+
 # -- General configuration ------------------------------------------------
 
 # If your documentation needs a minimal Sphinx version, state it here.
@@ -42,6 +47,7 @@ extensions = [
     'sphinx.ext.githubpages',
     'selenium_screenshots.screener',
     'sphinxcontrib.fulltoc',
+    'clean_index.builder'
 ]
 
 # rawfiles = ['CNAME']
