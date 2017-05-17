@@ -2,7 +2,7 @@ Pillow
 requests>=2.4.1
 selenium-requests
 selenium
-Sphinx
+Sphinx<1.6.1
 sphinx-rtd-theme
 sphinx-autobuild
 solar-theme
