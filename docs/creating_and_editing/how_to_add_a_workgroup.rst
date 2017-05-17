@@ -18,27 +18,28 @@ How to Add a Workgroup
    :alt: 
    :crop_element: div#content a[href="/django/admin/aristotle_mdr/workgroup/add/"]
    
-3. You will then be asked to give the new workgroup a name, which should say what the workgroup does,
+3. You will then be asked to give the new workgroup a name, which helps members identify the workgroups they are in,
 and then the definition of the workgroup, which let's people know what the role of the workgroup is
 
 .. screenshot::
    :server_path: /django/admin/aristotle_mdr/workgroup/add/
    :crop: [0,0,1200,650]
-   
-4. Then select the users you want in a particular workgroup
+
+   import time
+   time.sleep(5)
+
+
+4. Then select the users you want in a particular workgroup, by assigning them to the roles they will perform:
 
 .. screenshot::
-   :server_path: /django/admin/aristotle_mdr/workgroup/add/
    :crop: [0,700,1200,2100]
    
 5. Once done, click "save and continue editing" or "save" to finish creating your new workgroup, 
 you will then recieve a message at the top of your screen saying that you have sucessfully created a new workgroup 
 
 .. screenshot::
-   :server_path: /django/admin/aristotle_mdr/workgroup/add/
    :alt: 
    :crop_element: div#container input[value="Save and continue editing"]
 
 
-   
-   
+ 
