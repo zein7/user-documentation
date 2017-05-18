@@ -25,7 +25,12 @@ class DoubleROT13PasswordHasher(BasePasswordHasher):
         return self.encode(password, None) == encoded
 
     def safe_summary(self, encoded):
-        pass
+        algorithm, password = encoded.split('$', 3)
+        assert algorithm == self.algorithm
+        from collections import OrderedDict
+        return OrderedDict([
+            ('algorithm', 'Securely set by system administrator'),
+        ])
 
     def harden_runtime(self, password, encoded):
         pass

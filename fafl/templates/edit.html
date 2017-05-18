@@ -1,0 +1,171 @@
+<!doctype html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <title>{% block title %}Fancy Editor For Sphinx{% endblock%}</title>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+
+{% block scripts %}
+<link rel="stylesheet" href="https://codemirror.net/lib/codemirror.css">
+<script src="https://codemirror.net/lib/codemirror.js"></script>
+<script src="https://codemirror.net/addon/mode/overlay.js"></script>
+<script type="text/javascript" src="https://codemirror.net/mode/rst/rst.js"></script>
+
+<link rel="stylesheet" href="https://codemirror.net/addon/dialog/dialog.css">
+<link rel="stylesheet" href="https://codemirror.net/addon/search/matchesonscrollbar.css">
+
+<script src="https://codemirror.net/mode/xml/xml.js"></script>
+<script src="https://codemirror.net/addon/dialog/dialog.js"></script>
+<script src="https://codemirror.net/addon/search/searchcursor.js"></script>
+<script src="https://codemirror.net/addon/search/search.js"></script>
+<script src="https://codemirror.net/addon/scroll/annotatescrollbar.js"></script>
+<script src="https://codemirror.net/addon/search/matchesonscrollbar.js"></script>
+<script src="https://codemirror.net/addon/search/jump-to-line.js"></script>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/semantic-ui/2.2.10/semantic.min.css">
+<script src="https://cdn.jsdelivr.net/semantic-ui/2.2.10/semantic.min.js"></script>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+<script>
+  var is_changed = 0;
+
+  // inserts text around the cursor or selection
+  function insertAround(start, end) {
+    var doc = editor;
+    var cursor = doc.getCursor();
+
+    if (doc.somethingSelected()) {
+      var selection = doc.getSelection();
+      doc.replaceSelection(start + selection + end);
+    } else {
+      // If no selection then insert start and end args and set cursor position between the two.
+      doc.replaceRange(start + end, { line: cursor.line, ch: cursor.ch });
+      doc.setCursor({ line: cursor.line, ch: cursor.ch + start.length });
+    }
+    editor.focus();
+  }
+
+  function save() {
+    is_changed = 0;
+    var info = editor.getScrollInfo();
+    document.getElementById("myform").submit();
+  }
+
+
+  $(window).bind('beforeunload', function(e){
+    if (is_changed == 1) return true;
+    else e=null; // i.e; if form state change show warning box, else don't show it.
+  });
+
+</script>
+
+
+<style>
+.flex-container {
+    display: -webkit-flex;
+    display: flex;
+    width: auto;
+    height: 90vh;
+    background-color: #7799CC;
+}
+
+.CodeMirror {
+    border: 1px solid #eee;
+    height: 65vh;
+}
+
+.flex-item, .flex-item-rigid {
+    width: 50%;
+    height: auto;
+    margin: 10px;
+}
+.flex-item {
+    overflow: scroll;
+}
+button
+{
+    margin: -1px;
+    padding: 0px;
+}
+div.bodywrapper {
+    margin: 0 0 0 0px;
+}
+</style>
+{% endblock %}
+
+  </head>
+
+  <body role="document">
+  <div class="body" role="main">
+    <div class="flex-container" align="left">
+      <div class="flex-item-rigid">
+        <p style="line-height: 200%;">
+          <div class="ui icon buttons">
+            <button class='ui button' onclick="insertAround('\nMain heading\n============','')">H1</button>
+            <button class='ui button' onclick="insertAround('\nSecond-level heading\n--------------------','')">H2</button>
+            <button class='ui button' onclick="insertAround('\Third-level heading\n+++++++++++++++++++','')">H3</button>
+          </div>
+          <div class="ui icon buttons">
+            <button class='ui button' onclick="insertAround('**','**')"
+                    title="{{ _('Bold') }}"><i class='fa fa-bold'></i></button>
+            <button class='ui button' onclick="insertAround('*','*')" style="font-family:verdana;"
+                    title="{{ _('Italic') }}"><i class='fa fa-italic'></i></button>
+            <button class='ui button' onclick="insertAround('\n* item\n* item','')"
+                    title="{{ _('unordered list') }}"><i class='fa fa-list-ul'></i></button>
+            <button class='ui button' onclick="insertAround('\n#. first item\n#. second item','')"
+                    title="{{ _('ordered list') }}"><i class='fa fa-list-ol'></i></button>
+          </div>
+          <div class="ui icon buttons">
+            <button class='ui blue button' onclick="insertAround('\n.. note:: A note','\n')"
+                    title="{{ _('Note') }}">N</button>
+            <button class='ui green button' onclick="insertAround('\n.. hint:: A hint','\n')"
+                    title="{{ _('Note') }}">H</button>
+            <button class='ui orange button' onclick="insertAround('\n.. attention:: An attention','\n')"
+                    title="{{ _('Attention') }}">A</button>
+            <button class='ui red button' onclick="insertAround('\n.. warning:: A warning','\n')"
+                    title="{{ _('Warning') }}">W</button>
+          </div>
+          <div class="ui icon buttons">
+            <button class='ui button' onclick="insertAround(':doc:`',' </path/to/page>`')"
+                    title="{{ _('Internal Link') }}"><i class='fa fa-paperclip'></i></button>
+            <button class='ui button' onclick="insertAround('`Some text`_\n\n.. _Some text: http://www.some-website.org/`','')"
+                    title="{{ _('External Link') }}"><i class='fa fa-link'></i></button>
+            <button class='ui button' onclick="insertAround('.. screenshot::\n   :server_path: /path-to-page\n   :alt: Alternate text for screen reader\n   :browser_height: 733\n   :clicker: CSS selector to show where to click\n   :highlight: CSS selector for area to highlight\n   :crop: Area or CSS selector to crop to', '')"
+                    title="{{ _('Screenshot') }}">
+              <i class='fa fa-camera-retro'></i></button>
+            </button>
+          </div>
+
+        <form id="myform" action="" method="post">
+          {% csrf_token %}
+          <textarea id="code" name="code">{{ rst }}</textarea>
+          <br>
+
+          <input id="preview" class="ui large button" name="preview" type="button" value="preview" onClick="save()" />
+          <a href="/fafl/raw/" target="embiggened_previewer" class="ui button" title="Its a perfectly cromulent word"><i class="fa fa-expand"></i> Embiggen</a>
+
+        </form>
+      </div>
+
+      <script>
+        var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
+          extraKeys: {"Alt-F": "findPersistent"},
+          extraKeys: {"Ctrl-F": "findPersistent"},
+          lineNumbers: false,
+          lineWrapping: true,
+        });
+
+        editor.on("change", function(){ is_changed = 1; }  );
+      </script>
+
+      <iframe id="html_view" class="flex-item" src="/fafl/raw" onload="document.getElementById('html_view').scrollTop = 200;">
+      </iframe>
+    </div>
+  </div>
+
+</body>
+</html>
