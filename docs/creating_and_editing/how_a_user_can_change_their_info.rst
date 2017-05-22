@@ -17,17 +17,15 @@ How a User can Change Their Information
    :crop_element: div#dashboard-nav a[href="/account/edit"]
 
 
-3. If they want to change their password they have to click the cog icon and a drop down box will appear that says "change password"
+3. If they want to change their password they have to click the cog icon and a drop down box will appear that says "change password".
 
 .. screenshot::
    :server_path: /account/home
    :alt:
    :crop_element: div#dashboard-nav a[href="/account/password/change"]
    
-4. The user can then change their password
+4. The user can then change their password.
 
 .. screenshot::
    :server_path: /account/password/change
    :alt:
-   :crop: [0,700,1200,2100]
-   
