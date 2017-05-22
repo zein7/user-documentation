@@ -22,7 +22,7 @@ How a User can Change Their Information
 .. screenshot::
    :server_path: /account/home
    :alt:
-   :crop_element: div#dashboard-nav a[href="/account/password/change"]
+   :crop_element: div#content a[href="/account/password/change"]
    
 4. The user can then change their password.
 
