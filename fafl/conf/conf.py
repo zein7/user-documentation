@@ -1,7 +1,8 @@
 import os, sys
 user_doc_path = os.path.abspath('../../')
 sys.path.insert(0, user_doc_path)
-
+sys.path.insert(0, os.path.abspath('.'))
+print(sys.path)
 from docs.conf import *
 
 screenshots_server_path = "http://%s"% os.getenv('aristotlemdr__ALLOWED_HOSTS', '0.0.0.0:8080')
