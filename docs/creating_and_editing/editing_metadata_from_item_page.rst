@@ -35,7 +35,7 @@ as shown below:
    browser.find_element_by_css_selector('a[href="/item/18/edit"][data-toggle="modal"]').click()
 
    import time
-   time.sleep(2)
+   time.sleep(4)
 
 Maximizing the metadata editor
 ------------------------------
