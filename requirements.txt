@@ -9,4 +9,4 @@ whitenoise
 
 -r requirements.docs.txt
 
-aristotle-metadata-registry>=1.5.2
+aristotle-metadata-registry>=1.6.3
