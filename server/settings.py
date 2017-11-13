@@ -84,10 +84,10 @@ ARISTOTLE_SETTINGS['SITE_INTRO'] = "Use Aristotle Metadata Registry to search fo
 ARISTOTLE_SETTINGS['SITE_BRAND'] =  '/aristotle_mdr/images/aristotle_small.png'
 
 
-ARISTOTLE_SETTINGS['BULK_ACTIONS'].update({
-    'quick_pdf_download':'aristotle_mdr.forms.bulk_actions.QuickPDFDownloadForm',
-    'add_slots': 'aristotle_mdr.contrib.slots.forms.BulkAssignSlotsForm',
-})
+ARISTOTLE_SETTINGS['BULK_ACTIONS'] = ARISTOTLE_SETTINGS['BULK_ACTIONS']+[
+    'aristotle_mdr.forms.bulk_actions.QuickPDFDownloadForm',
+    'aristotle_mdr.contrib.slots.forms.BulkAssignSlotsForm',
+]
 
 ROOT_URLCONF = 'server.urls'
 
