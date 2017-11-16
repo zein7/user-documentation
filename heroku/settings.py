@@ -71,14 +71,33 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 #Aristotle settings are below, settings these gives the ability to personalise this particular installation.
 
-HAYSTACK_CONNECTIONS = {
-    'default': {
-        #'ENGINE': 'haystack.backends.whoosh_backend.WhooshEngine',
-        'ENGINE': 'aristotle_mdr.contrib.search_backends.facetted_whoosh.FixedWhooshEngine',
-        'PATH': os.path.join(BASE_DIR, 'whoosh_index'),
-        'INCLUDE_SPELLING':True,
-    },
-}
+from urllib.parse import urlparse
+es = (
+    os.environ.get('SEARCHBOX_URL', None) or
+    os.environ.get('BONSAI_URL', None)
+)
+
+if es is not None:
+    es = urlparse(es)
+    port = es.port or 80
+    
+    HAYSTACK_CONNECTIONS = {
+        'default': {
+            'ENGINE': 'haystack_elasticsearch.elasticsearch5.Elasticsearch5SearchEngine',
+            'URL': es.scheme + '://' + es.hostname + ':' + str(port),
+            'INDEX_NAME': 'documents',
+        },
+    }
+    if es.username:
+        HAYSTACK_CONNECTIONS['default']['KWARGS'] = {"http_auth": es.username + ':' + es.password}
+else:
+    HAYSTACK_CONNECTIONS = {
+        'default': {
+            'ENGINE': 'aristotle_mdr.contrib.search_backends.facetted_whoosh.FixedWhooshEngine',
+            'PATH': os.path.join(os.path.dirname(__file__), 'whoosh_index'),
+            'INCLUDE_SPELLING': True,
+        },
+    }
 HAYSTACK_SIGNAL_PROCESSOR = 'aristotle_mdr.contrib.help.signals.AristotleHelpSignalProcessor'
 
 INSTALLED_APPS = (
