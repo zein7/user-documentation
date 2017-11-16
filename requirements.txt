@@ -10,3 +10,4 @@ waitress
 -r requirements.docs.txt
 
 aristotle-metadata-registry>=1.6.3
+git+https://data61.githost.io/aristotle/aristotle-cloud.git@1.6#egg=aristotle-cloud-0.0.1
