@@ -16,13 +16,13 @@ How to Add a Workgroup
 .. screenshot::
    :server_path: /account/admin
    :alt: 
-   :crop_element: div#content a[href="/django/admin/aristotle_mdr/workgroup/add/"]
+   :crop_element: div#content a[href="/workgroups/create"]
    
 3. You will then be asked to give the new workgroup a name, which helps members identify the workgroups they are in,
 and then the definition of the workgroup, which let's people know what the role of the workgroup is
 
 .. screenshot::
-   :server_path: /django/admin/aristotle_mdr/workgroup/add/
+   :server_path: /workgroups/create
    :crop: [0,0,1200,650]
 
    import time
@@ -39,7 +39,4 @@ you will then recieve a message at the top of your screen saying that you have s
 
 .. screenshot::
    :alt: 
-   :crop_element: div#container input[value="Save and continue editing"]
-
-
- 
+   :crop_element: div.admin-wrap button[type="Submit"]
