@@ -28,5 +28,18 @@ HAYSTACK_SIGNAL_PROCESSOR = 'aristotle_mdr.contrib.help.signals.AristotleHelpSig
 
 INSTALLED_APPS = (
     'heroku',
+    'fafl'
 ) + INSTALLED_APPS
 
+ROOT_URLCONF = 'server.urls'
+
+ARISTOTLE_SETTINGS['CONTENT_EXTENSIONS'] = ARISTOTLE_SETTINGS['CONTENT_EXTENSIONS'] + ['aristotle_mdr_links']
+ARISTOTLE_SETTINGS['SITE_NAME'] = "My Registry"
+ARISTOTLE_SETTINGS['SITE_INTRO'] = "Use Aristotle Metadata Registry to search for metadata..."
+ARISTOTLE_SETTINGS['SITE_BRAND'] =  '/aristotle_mdr/images/aristotle_small.png'
+
+
+ARISTOTLE_SETTINGS['BULK_ACTIONS'] = ARISTOTLE_SETTINGS['BULK_ACTIONS']+[
+    'aristotle_mdr.forms.bulk_actions.QuickPDFDownloadForm',
+    'aristotle_mdr.contrib.slots.forms.BulkAssignSlotsForm',
+]
