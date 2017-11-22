@@ -9,6 +9,8 @@ Searching for content
 .. screenshot::
    :server_path: /search
    :alt: A basic search screen
+   :crop: (0,0,900,465)
+   
 
 Here are some results
 +++++++++++++++++++++
@@ -16,6 +18,8 @@ Here are some results
 .. screenshot::
    :server_path: /search?q=person
    :alt: A basic search screen
+   :crop: (0,0,900,465)
+   
    
 How to refine your results with filters
 ---------------------------------------
