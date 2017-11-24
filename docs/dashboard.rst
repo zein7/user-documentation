@@ -1,8 +1,6 @@
 The Dashboard
 =============
 
-----
-
 This is your Dashboard, from here you can create, see notifications, and even contribute to discussions within your Workgroups.
 
 .. screenshot:: 
