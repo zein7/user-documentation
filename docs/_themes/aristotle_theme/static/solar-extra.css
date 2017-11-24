@@ -1,3 +1,8 @@
 /* solar.css
  Our overrides
 */
+
+img {
+  box-shadow : 5px 5px 5px grey;
+  border : gray solid 1px;
+}
