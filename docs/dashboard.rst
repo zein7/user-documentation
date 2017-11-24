@@ -1,12 +1,16 @@
 The Dashboard
 =============
 
+----
+
 This is your Dashboard, from here you can create, see notifications, and even contribute to discussions within your Workgroups.
 
 .. screenshot:: 
    :server_path: /account/home
    :alt: A basic search screen
    :login: {'url': '/login', "username": "vicky", "password": "Viewer"}
+   
+----
 
 This if your Dashboard side panel. 
 
