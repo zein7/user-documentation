@@ -5,4 +5,9 @@
 img {
   box-shadow : 5px 5px 5px grey;
   border : gray solid 1px;
+  display: block;
+}
+
+#aristotle-metadata-registry-user-documentation p {
+ font-size: 18px
 }
