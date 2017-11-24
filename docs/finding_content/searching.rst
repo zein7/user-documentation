@@ -54,14 +54,12 @@ How to refine your results with filters
 
 .. screenshot::
    :server_path: /search?q=person
-   :clicker: li[class="dropdown dropdown-menu-date open"]
    :crop: (0,0,900,465)
 
 "Created" You can pick when the content you are searching for was created
 
 .. screenshot::
    :server_path: /search?q=person
-   :clicker: li[class="dropdown dropdown-menu-date"]
    :crop: (0,0,900,465)
 
    
