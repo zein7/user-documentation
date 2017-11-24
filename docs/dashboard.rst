@@ -34,12 +34,15 @@ Create different metadata items
    :server_path: /account/home
    :alt: Create metadata
    :crop_element: a[href="/create"]
-   :clicker: a[href="/create"]
+   :clicker: div#content.container a[href="/create"]
    
 .. screenshot::
    :server_path: /create
    :alt: Create metadata items
    :crop_element: div[class="col-sm-12 col-md-12"]
+   :browser_height: 300
+   
+
    
    
    
