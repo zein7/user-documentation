@@ -9,5 +9,11 @@ img {
 }
 
 #aristotle-metadata-registry-user-documentation p {
- font-size: 18px
+ font-size: 18px;
+ padding-top: 1.5em;
+}
+
+hr {
+   border: 0; height: 1px; background: #333; background-image: linear-gradient(to right, #ccc, #333, #ccc);
+ 
 }
