@@ -19,3 +19,4 @@ In this section
    adding_a_new_user.rst
    how_a_user_can_change_their_info.rst
    how_to_add_a_workgroup.rst
+   request_review_for_metadata_item.rst

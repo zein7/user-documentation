@@ -1,1 +1,1 @@
-web: gunicorn heroku.wsgi --log-file -
+web: waitress-serve --port=$PORT heroku.wsgi:application
