@@ -1,0 +1,39 @@
+{
+  "name": "user-documentation",
+  "description": "",
+  "scripts": {
+  },
+  "env": {
+    "ALLOWED_HOSTS": "*",
+    "aristotlemdr__ALLOWED_HOSTS": "*",
+    "aristotlemdr__DEBUG": {
+      "required": true
+    },
+    "DJANGO_INSTALLED": {
+      "required": true
+    },
+    "DJANGO_SETTINGS_MODULE": {
+      "required": true
+    },
+    "MAILGUN_API_KEY": {
+      "required": true
+    },
+    "NETRC": {
+      "required": true
+    }
+  },
+  "formation": {
+  },
+  "addons": [
+    "heroku-postgresql",
+    "searchbox"
+  ],
+  "buildpacks": [
+    {
+      "url": "heroku/python"
+    },
+    {
+      "url": "https://github.com/stomita/heroku-buildpack-phantomjs"
+    }
+  ]
+}
