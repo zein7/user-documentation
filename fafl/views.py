@@ -41,9 +41,11 @@ def build(timeout=10, build_dir=None, source_dir=None):
 filename = 'index'
 base_dir = '/tmp/fafl/'
 
+
 def mk_if_not_exists(dir_name):
     if not os.path.exists(dir_name):
         os.makedirs(dir_name)
+
 
 def edit(request):
     tmpdir = "/tmp/fafl" #mkdtemp(prefix="fafl-build-")
@@ -66,10 +68,11 @@ def edit(request):
         if code != 0:
             write_file(
                 branch_build_path, 
-                render_to_string('err.html', context={'err':err, 'out':out})
+                render_to_string('fafl/err.html', context={'err':err, 'out':out})
             )
 
-    return render(request, 'edit.html', context={'filename':filename, 'rst':rst})
+    return render(request, 'fafl/edit.html', context={'filename':filename, 'rst':rst})
+
 
 # @sphinxedit.route('/raw', methods = ['GET', 'POST'])
 def raw(request, fn='index.html'):
@@ -81,3 +84,32 @@ def raw(request, fn='index.html'):
     content_type, encoding= mimetypes.guess_type(fn)
 
     return HttpResponse(doc, content_type=content_type)
+
+
+def home(request):
+    return render(request, 'fafl/home.html', context={})
+
+
+from django.core.management import call_command
+from io import StringIO
+import yaml
+
+def dumper(request):
+    dump = "'"
+    if request.POST:
+        out = StringIO()
+
+        call_command(
+            'dumpdata', format="yaml",
+            exclude=[
+                'auth', 'contenttypes', 'aristotle_mdr_help', 'easyaudit'
+            ],
+            stdout=out
+        )
+        dump = out.getvalue()
+        
+    return render(
+        request, 'fafl/dumper.html',
+        context={"dump":dump}
+    )
+

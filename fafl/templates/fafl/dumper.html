@@ -1,0 +1,41 @@
+{% extends "fafl/base.html" %}
+
+{% block title %}Fancy Editor For Sphinx - Home{% endblock%}
+
+{% block scripts %}
+
+<script>
+  var is_changed = 0;
+
+  function dump() {
+    is_changed = 0;
+    var info = editor.getScrollInfo();
+    document.getElementById("myform").submit();
+  }
+
+
+  $(window).bind('beforeunload', function(e){
+    if (is_changed == 1) return true;
+    else e=null; // i.e; if form state change show warning box, else don't show it.
+  });
+
+</script>
+
+{% endblock %}
+
+
+{% block content %}
+      <div class="flex-item-rigid">
+
+        <form id="myform" action="" method="post">
+          {% csrf_token %}
+          <br>
+
+          {# <input id="preview" class="ui large button" name="preview" type="button" value="dump" onClick="dump()" /> #}
+          <button id="preview" class="ui large button" name="preview" type="sumbit">dump</button>
+
+        </form>
+        <textarea style="width:100%; min-height:500px;font-family:monospace">{% if dump %}{{dump}}{% endif %}</textarea>
+      </div>
+
+{% endblock %}

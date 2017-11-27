@@ -1,0 +1,59 @@
+{% extends "fafl/base.html" %}
+
+{% block title %}Fancy Editor For Sphinx - Home{% endblock%}
+
+{% block scripts %}
+{% endblock %}
+
+
+{% block content %}
+      <div class="flex-item-rigid">
+        <p style="line-height: 200%;">
+          <div class="ui icon buttons">
+            <button class='ui button' onclick="insertAround('\nMain heading\n============','')">H1</button>
+            <button class='ui button' onclick="insertAround('\nSecond-level heading\n--------------------','')">H2</button>
+            <button class='ui button' onclick="insertAround('\Third-level heading\n+++++++++++++++++++','')">H3</button>
+          </div>
+          <div class="ui icon buttons">
+            <button class='ui button' onclick="insertAround('**','**')"
+                    title="{{ _('Bold') }}"><i class='fa fa-bold'></i></button>
+            <button class='ui button' onclick="insertAround('*','*')" style="font-family:verdana;"
+                    title="{{ _('Italic') }}"><i class='fa fa-italic'></i></button>
+            <button class='ui button' onclick="insertAround('\n* item\n* item','')"
+                    title="{{ _('unordered list') }}"><i class='fa fa-list-ul'></i></button>
+            <button class='ui button' onclick="insertAround('\n#. first item\n#. second item','')"
+                    title="{{ _('ordered list') }}"><i class='fa fa-list-ol'></i></button>
+          </div>
+          <div class="ui icon buttons">
+            <button class='ui blue button' onclick="insertAround('\n.. note:: A note','\n')"
+                    title="{{ _('Note') }}">N</button>
+            <button class='ui green button' onclick="insertAround('\n.. hint:: A hint','\n')"
+                    title="{{ _('Note') }}">H</button>
+            <button class='ui orange button' onclick="insertAround('\n.. attention:: An attention','\n')"
+                    title="{{ _('Attention') }}">A</button>
+            <button class='ui red button' onclick="insertAround('\n.. warning:: A warning','\n')"
+                    title="{{ _('Warning') }}">W</button>
+          </div>
+          <div class="ui icon buttons">
+            <button class='ui button' onclick="insertAround(':doc:`',' </path/to/page>`')"
+                    title="{{ _('Internal Link') }}"><i class='fa fa-paperclip'></i></button>
+            <button class='ui button' onclick="insertAround('`Some text`_\n\n.. _Some text: http://www.some-website.org/`','')"
+                    title="{{ _('External Link') }}"><i class='fa fa-link'></i></button>
+            <button class='ui button' onclick="insertAround('.. screenshot::\n   :server_path: /path-to-page\n   :alt: Alternate text for screen reader\n   :browser_height: 733\n   :clicker: CSS selector to show where to click\n   :highlight: CSS selector for area to highlight\n   :crop: Area or CSS selector to crop to', '')"
+                    title="{{ _('Screenshot') }}">
+              <i class='fa fa-camera-retro'></i></button>
+            </button>
+          </div>
+
+        <form id="myform" action="" method="post">
+          {% csrf_token %}
+          <textarea id="code" name="code">{{ rst }}</textarea>
+          <br>
+
+          <input id="preview" class="ui large button" name="preview" type="button" value="preview" onClick="save()" />
+          <a href="/fafl/raw/" target="embiggened_previewer" class="ui button" title="Its a perfectly cromulent word"><i class="fa fa-expand"></i> Embiggen</a>
+
+        </form>
+      </div>
+
+{% endblock %}

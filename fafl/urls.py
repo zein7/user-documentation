@@ -3,6 +3,8 @@ from . import views
 
 
 urlpatterns = [
-    url(r'^/$', views.edit),
+    url(r'^/$', views.home),
+    url(r'^/edit$', views.edit, name="editor"),
+    url(r'^/dumper$', views.dumper, name="dumper"),
     url(r'^/raw/(.*)', views.raw),
 ]
