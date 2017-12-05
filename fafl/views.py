@@ -90,26 +90,107 @@ def home(request):
     return render(request, 'fafl/home.html', context={})
 
 
+def help(request):
+    return render(request, 'fafl/help.html', context={})
+
+
 from django.core.management import call_command
 from io import StringIO
 import yaml
 
 def dumper(request):
-    dump = "'"
+    dump = ""
     if request.POST:
         out = StringIO()
 
         call_command(
             'dumpdata', format="yaml",
             exclude=[
-                'auth', 'contenttypes', 'aristotle_mdr_help', 'easyaudit'
+                'auth', 'contenttypes', 'aristotle_mdr_help', 'easyaudit', 'notifications'
             ],
             stdout=out
         )
         dump = out.getvalue()
+        dump = [
+            x for x in yaml.load(dump)
+            if x['model'] not in [
+                # our exceptional objects which cause problems...
+                'aristotle_mdr.possumprofile',
+            ]  
+        ]
+        dump = str(yaml.dump(dump))
         
     return render(
         request, 'fafl/dumper.html',
         context={"dump":dump}
     )
 
+
+def loader(request):
+    import tempfile
+    
+    dump = ""
+    data = ""
+    dumps = []
+    if request.POST:
+        data = request.POST['data']
+        f = tempfile.NamedTemporaryFile('w', delete=False, suffix=".yaml")
+        f.write(data)
+        f.close()
+
+        out = StringIO()
+
+        try:
+            call_command(
+                'loaddata', f.name, format="yaml",
+                stdout=out
+            )
+            dump = out.getvalue ()
+            dumps.append(dump)
+        except Exception as e:
+            dumps.append(e)
+
+    dumps = "\n\n".join([str(s) for s in dumps])
+    return render(
+        request, 'fafl/loader.html',
+        context={"dump":dumps, "data":data}
+    )
+
+
+def resetter(request):
+    import tempfile
+    
+    dump = ""
+    data = ""
+    dumps = []
+    if request.POST:
+        out = StringIO()
+
+        try:
+            call_command(
+                'flush', interactive=False,
+                stdout=out
+            )
+            call_command(
+                'loaddata', 'users.yaml', format="yaml",
+                stdout=out
+            )
+            call_command(
+                'loaddata', 'iso_metadata.json', format="json",
+                stdout=out
+            )
+            call_command(
+                'loaddata', 'test_metadata.yaml', format="yaml",
+                stdout=out
+            )
+            dump = out.getvalue ()
+            dumps.append(dump)
+        except Exception as e:
+            dumps.append(e)
+
+
+    dumps = "\n\n".join([str(s) for s in dumps])
+    return render(
+        request, 'fafl/resetter.html',
+        context={"dump":dumps, "data":data}
+    )

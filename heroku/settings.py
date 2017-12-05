@@ -31,7 +31,8 @@ HAYSTACK_SIGNAL_PROCESSOR = 'aristotle_mdr.contrib.help.signals.AristotleHelpSig
 INSTALLED_APPS = (
     'heroku',
     'fafl',
-    'aristotle_mdr.contrib.self_publish'
+    'aristotle_mdr.contrib.self_publish',
+    'server',
 ) + INSTALLED_APPS
 
 ROOT_URLCONF = 'heroku.urls'

@@ -54,11 +54,18 @@ div.bodywrapper {
   <body role="document">
   <div class="body" role="main">
         <p style="line-height: 200%;">
-          <span>FAFL - </span>
+          
+          <a href="{% url 'fafl:home' %}" class='ui button'>
+            <i class='home icon'></i> FAFL Home</a>
           <span class="ui icon buttons">
-            <a href="{% url 'fafl:editor' %}" class='ui button'>Editor</a>
-            <a href="{% url 'fafl:dumper' %}"class='ui button'>Dumper</a>
-            <a href="{% url 'fafl:editor' %}" class='ui button'>Help</a>
+            <a href="{% url 'fafl:editor' %}" class='ui button'>
+            <i class='edit icon'></i> Editor</a>
+            <a href="{% url 'fafl:dumper' %}"class='ui button'>
+            <i class='cloud download icon'></i> Dumper</a>
+            <a href="{% url 'fafl:loader' %}"class='ui button'>
+            <i class='cloud upload icon'></i> Loader</a>
+            <a href="{% url 'fafl:help' %}" class='ui button'>
+            <i class='help circle icon'></i> Help</a>
           </span>
         </p>
     <div class="flex-container" align="top">
