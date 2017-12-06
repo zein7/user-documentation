@@ -1,0 +1,55 @@
+{% extends "fafl/base.html" %}
+
+{% block title %}Fancy Editor For Sphinx - Home{% endblock%}
+
+{% block scripts %}
+
+<script>
+  var is_changed = 0;
+
+  function dump() {
+    is_changed = 0;
+    var info = editor.getScrollInfo();
+    document.getElementById("myform").submit();
+  }
+
+
+  $(window).bind('beforeunload', function(e){
+    if (is_changed == 1) return true;
+    else e=null; // i.e; if form state change show warning box, else don't show it.
+  });
+
+</script>
+
+{% endblock %}
+
+
+{% block content %}
+      <div class="flex-item-rigid">
+
+        <form id="myform" action="" method="post">
+          {% csrf_token %}
+          <br>
+
+          <button id="preview" class="ui large button" name="preview" type="submit"
+          onclick="return window.confirm('Last chance, hit ok ONLY IF YOU WANT TO WIPE EVERYTHING');"
+          >
+            Hit this button only if you want to reset everything.
+          </button>
+
+        </form>
+      </div>
+      
+      <div>
+        <h1>How to use</h1>
+        <p>
+        Hit the button to reset everything.
+        </p>
+        
+        {% if dump %}
+        This happened
+        <pre style="overflow:scroll; background-color:white; width:800px; height:200px">{{ dump }}</pre>
+        {% endif %}
+      </div>
+
+{% endblock %}

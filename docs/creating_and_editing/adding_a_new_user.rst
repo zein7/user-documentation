@@ -9,7 +9,7 @@ How to Add a New User
    :server_path: /account/home
    :alt: 
    :login: {'url': '/login', "username": "alice", "password": "Administrator"}
-   :clicker: #dashboard-nav a[href="/account/admin"]
+   :clicker: #dashboard-nav a[href='/account/admin']
    :browser_height: 733
    
 2. Click the add user link
