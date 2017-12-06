@@ -106,7 +106,8 @@ def dumper(request):
         call_command(
             'dumpdata', format="yaml",
             exclude=[
-                'auth', 'contenttypes', 'aristotle_mdr_help', 'easyaudit', 'notifications'
+                'auth', 'contenttypes', 'aristotle_mdr_help', 'easyaudit',
+                'notifications', 'sessions',
             ],
             stdout=out
         )
