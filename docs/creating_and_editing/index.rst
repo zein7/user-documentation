@@ -20,3 +20,4 @@ In this section
    how_a_user_can_change_their_info.rst
    how_to_add_a_workgroup.rst
    request_review_for_metadata_item.rst
+   create_and_participate_in_discussions.rst
