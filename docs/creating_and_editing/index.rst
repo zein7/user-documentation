@@ -21,3 +21,4 @@ In this section
    how_to_add_a_workgroup.rst
    request_review_for_metadata_item.rst
    create_and_participate_in_discussions.rst
+   how_to_change_the_registration_status_of_an_item.rst
