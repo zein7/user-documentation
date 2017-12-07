@@ -23,5 +23,16 @@ You will be able to see all of the item you have created that haven't been regis
 
 In you Sandbox, you can perform "bulk" actions to your items
 
+.. screenshot::
+   :server_path: /account/sandbox     
+   :alt: My Sandbox contents
+   :clicker: button[class="btn btn-default dropdown-toggle"]
 
+   browser.find_element_by_css_selector('.dropup button').click()
+   
+To do this, select the items you want the bulk actions performed on. You can individually select the items or tick the "select all" box
 
+.. screenshot::
+   :server_path: /account/sandbox     
+   :box: *[id="all_in_queryset"]
+   
