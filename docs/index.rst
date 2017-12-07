@@ -16,6 +16,7 @@ Below is a list of help topics available within this documentation. If you are u
    dashboard.rst
    creating_and_editing/index.rst
    api/index.rst
+   my_dashboard/index.rst
 
 
 
