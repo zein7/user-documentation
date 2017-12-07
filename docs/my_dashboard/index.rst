@@ -12,3 +12,4 @@ What is on My Dashboard?
    :caption: Contents:
    
    my_sandbox.rst
+   my_review_requests.rst
