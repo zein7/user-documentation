@@ -24,3 +24,4 @@ In this section
    how_to_change_the_registration_status_of_an_item.rst
    deactivating_a_user.rst
    comparing_two_items.rst
+   viewing_audit_logs.rst
