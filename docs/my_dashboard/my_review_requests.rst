@@ -26,8 +26,7 @@ After selecting what you want to request a review for, go down to the "bulk acti
    :alt: My Sandbox
    :crop_element: button[class="btn btn-default dropdown-toggle"]
    :crop_element_padding: (10,10,200,300)
-   
-   :browser.find_element_by_css_selector('.dropup button').click()
+
 
 
 
