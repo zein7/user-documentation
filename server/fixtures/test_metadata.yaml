@@ -525,6 +525,35 @@
     synonyms: '', uuid: 3378707c-dae4-11e7-b720-5a2e3e7ceca9, version: '', workgroup: 3}
   model: aristotle_mdr._concept
   pk: 54
+- fields: {_is_locked: false, _is_public: false, comments: '', created: !!timestamp '2017-12-08
+      00:21:51.971732', definition: <p>The country where a person was born.</p>, modified: !!timestamp '2017-12-08
+      00:21:51.975249', name: Country of birth, origin_URI: '', references: '', responsible_organisation: '',
+    short_name: '', submitter: 10, submitting_organisation: '', superseded_by: null,
+    synonyms: '', uuid: c9cf461c-dbad-11e7-8e96-6aa9b9dbfcd4, version: '', workgroup: null}
+  model: aristotle_mdr._concept
+  pk: 55
+- fields: {_is_locked: false, _is_public: false, comments: '', created: !!timestamp '2017-12-08
+      00:24:30.232383', definition: '<p>A date, recorded as day, month, and year.</p>',
+    modified: !!timestamp '2017-12-08 00:24:30.239264', name: 'Date, DDMMYYYY', origin_URI: '',
+    references: '', responsible_organisation: '', short_name: '', submitter: 10, submitting_organisation: '',
+    superseded_by: null, synonyms: '', uuid: 2823ef24-dbae-11e7-9b1d-6aa9b9dbfcd4,
+    version: '', workgroup: null}
+  model: aristotle_mdr._concept
+  pk: 56
+- fields: {_is_locked: false, _is_public: false, comments: '', created: !!timestamp '2017-12-08
+      00:27:00.873521', definition: <p>The gender of a person.</p>, modified: !!timestamp '2017-12-08
+      00:28:05.760012', name: Gender Code X, origin_URI: '', references: '', responsible_organisation: '',
+    short_name: '', submitter: 10, submitting_organisation: '', superseded_by: null,
+    synonyms: '', uuid: 81edf34c-dbae-11e7-be6b-6aa9b9dbfcd4, version: '', workgroup: null}
+  model: aristotle_mdr._concept
+  pk: 57
+- fields: {_is_locked: false, _is_public: false, comments: '', created: !!timestamp '2017-12-08
+      00:29:05.290475', definition: <p>A place of residence.</p>, modified: !!timestamp '2017-12-08
+      00:29:05.297392', name: Address, origin_URI: '', references: '', responsible_organisation: '',
+    short_name: '', submitter: 10, submitting_organisation: '', superseded_by: null,
+    synonyms: '', uuid: cc167584-dbae-11e7-9055-6aa9b9dbfcd4, version: '', workgroup: null}
+  model: aristotle_mdr._concept
+  pk: 58
 - fields:
     cascade_registration: 0
     concepts: [32, 33, 34, 35, 36, 37, 38, 39, 41, 42, 43, 44, 45, 46, 47, 48]
@@ -645,6 +674,21 @@
     status: 5
   model: aristotle_mdr.reviewrequest
   pk: 11
+- fields:
+    cascade_registration: 0
+    concepts: [56, 55]
+    created: 2017-12-08 00:30:53.822214
+    message: Please review these items.
+    modified: 2017-12-08 00:30:53.822807
+    registration_authority: 3
+    registration_date: 2017-12-06
+    requester: 10
+    response: null
+    reviewer: null
+    state: 5
+    status: 0
+  model: aristotle_mdr.reviewrequest
+  pk: 12
 - fields: {changeDetails: null, concept: 19, created: !!timestamp '2016-05-02 22:23:11.708000',
     modified: !!timestamp '2016-05-02 22:23:11.708000', registrationAuthority: 3,
     registrationDate: 2009-04-28, state: 5, until_date: null}
@@ -834,6 +878,9 @@
   model: aristotle_mdr.objectclass
   pk: 50
 - fields: {}
+  model: aristotle_mdr.objectclass
+  pk: 58
+- fields: {}
   model: aristotle_mdr.property
   pk: 20
 - fields: {}
@@ -921,6 +968,9 @@
 - fields: {}
   model: aristotle_mdr.datatype
   pk: 5
+- fields: {description: ''}
+  model: aristotle_mdr.conceptualdomain
+  pk: 55
 - fields: {conceptual_domain: null, data_type: 4, description: '', format: 'X[XX]',
     maximum_length: 3, unit_of_measure: 17}
   model: aristotle_mdr.valuedomain
@@ -941,6 +991,14 @@
     maximum_length: null, unit_of_measure: null}
   model: aristotle_mdr.valuedomain
   pk: 53
+- fields: {conceptual_domain: null, data_type: null, description: '', format: '',
+    maximum_length: null, unit_of_measure: null}
+  model: aristotle_mdr.valuedomain
+  pk: 56
+- fields: {conceptual_domain: null, data_type: null, description: '', format: '',
+    maximum_length: null, unit_of_measure: null}
+  model: aristotle_mdr.valuedomain
+  pk: 57
 - fields: {end_date: null, meaning: Male, order: 1, start_date: null, value: '1',
     valueDomain: 30, value_meaning: null}
   model: aristotle_mdr.permissiblevalue
@@ -957,6 +1015,18 @@
     valueDomain: 30, value_meaning: null}
   model: aristotle_mdr.permissiblevalue
   pk: 4
+- fields: {end_date: null, meaning: Male, order: 1, start_date: null, value: M, valueDomain: 57,
+    value_meaning: null}
+  model: aristotle_mdr.permissiblevalue
+  pk: 5
+- fields: {end_date: null, meaning: Female, order: 1, start_date: null, value: F,
+    valueDomain: 57, value_meaning: null}
+  model: aristotle_mdr.permissiblevalue
+  pk: 6
+- fields: {end_date: null, meaning: Other, order: 2, start_date: null, value: O, valueDomain: 57,
+    value_meaning: null}
+  model: aristotle_mdr.permissiblevalue
+  pk: 7
 - fields: {conceptualDomain: null, objectClass: 19, property: 20}
   model: aristotle_mdr.dataelementconcept
   pk: 21
@@ -1087,6 +1157,31 @@
       00:18:50.975154', user: 10}
   model: reversion.revision
   pk: 16
+- fields: {comment: Added via concept wizard, date_created: !!timestamp '2017-12-08
+      00:21:51.974198', user: 10}
+  model: reversion.revision
+  pk: 17
+- fields: {comment: Added via concept wizard, date_created: !!timestamp '2017-12-08
+      00:24:30.238288', user: 10}
+  model: reversion.revision
+  pk: 18
+- fields: {comment: Added via concept wizard, date_created: !!timestamp '2017-12-08
+      00:27:00.876491', user: 10}
+  model: reversion.revision
+  pk: 19
+- fields: {comment: 'Added permissible value "Gender Code X: M - Male".', date_created: !!timestamp '2017-12-08
+      00:27:24.494642', user: 10}
+  model: reversion.revision
+  pk: 20
+- fields: {comment: 'Added permissible value "Gender Code X: F - Female". Added permissible
+      value "Gender Code X: O - Other".', date_created: !!timestamp '2017-12-08 00:28:05.758190',
+    user: 10}
+  model: reversion.revision
+  pk: 21
+- fields: {comment: Added via concept wizard, date_created: !!timestamp '2017-12-08
+      00:29:05.296411', user: 10}
+  model: reversion.revision
+  pk: 22
 - fields: {content_type: 11, db: default, format: json, object_id: '32', object_repr: Age,
     revision: 1, serialized_data: '[{"model": "aristotle_mdr._concept", "pk": 32,
       "fields": {"created": "2017-11-13T03:30:48.539Z", "modified": "2017-11-13T03:30:48.544Z",
@@ -2068,4 +2163,122 @@
       null}}]'}
   model: reversion.version
   pk: 104
-
+- fields: {content_type: 19, db: default, format: json, object_id: '55', object_repr: Country
+      of birth, revision: 17, serialized_data: '[{"model": "aristotle_mdr.conceptualdomain",
+      "pk": 55, "fields": {"description": ""}}]'}
+  model: reversion.version
+  pk: 105
+- fields: {content_type: 11, db: default, format: json, object_id: '55', object_repr: Country
+      of birth, revision: 17, serialized_data: '[{"model": "aristotle_mdr._concept",
+      "pk": 55, "fields": {"created": "2017-12-08T00:21:51.971Z", "modified": "2017-12-08T00:21:51.975Z",
+      "uuid": "c9cf461c-dbad-11e7-8e96-6aa9b9dbfcd4", "name": "Country of birth",
+      "definition": "<p>The country where a person was born.</p>", "workgroup": null,
+      "submitter": 10, "_is_public": false, "_is_locked": false, "short_name": "",
+      "version": "", "synonyms": "", "references": "", "origin_URI": "", "comments":
+      "", "submitting_organisation": "", "responsible_organisation": "", "superseded_by":
+      null}}]'}
+  model: reversion.version
+  pk: 106
+- fields: {content_type: 21, db: default, format: json, object_id: '56', object_repr: 'Date,
+      DDMMYYYY', revision: 18, serialized_data: '[{"model": "aristotle_mdr.valuedomain",
+      "pk": 56, "fields": {"data_type": null, "format": "", "maximum_length": null,
+      "unit_of_measure": null, "conceptual_domain": null, "description": ""}}]'}
+  model: reversion.version
+  pk: 107
+- fields: {content_type: 11, db: default, format: json, object_id: '56', object_repr: 'Date,
+      DDMMYYYY', revision: 18, serialized_data: '[{"model": "aristotle_mdr._concept",
+      "pk": 56, "fields": {"created": "2017-12-08T00:24:30.232Z", "modified": "2017-12-08T00:24:30.239Z",
+      "uuid": "2823ef24-dbae-11e7-9b1d-6aa9b9dbfcd4", "name": "Date, DDMMYYYY", "definition":
+      "<p>A date, recorded as day, month, and year.</p>", "workgroup": null, "submitter":
+      10, "_is_public": false, "_is_locked": false, "short_name": "", "version": "",
+      "synonyms": "", "references": "", "origin_URI": "", "comments": "", "submitting_organisation":
+      "", "responsible_organisation": "", "superseded_by": null}}]'}
+  model: reversion.version
+  pk: 108
+- fields: {content_type: 21, db: default, format: json, object_id: '57', object_repr: Gender
+      Code X, revision: 19, serialized_data: '[{"model": "aristotle_mdr.valuedomain",
+      "pk": 57, "fields": {"data_type": null, "format": "", "maximum_length": null,
+      "unit_of_measure": null, "conceptual_domain": null, "description": ""}}]'}
+  model: reversion.version
+  pk: 109
+- fields: {content_type: 11, db: default, format: json, object_id: '57', object_repr: Gender
+      Code X, revision: 19, serialized_data: '[{"model": "aristotle_mdr._concept",
+      "pk": 57, "fields": {"created": "2017-12-08T00:27:00.873Z", "modified": "2017-12-08T00:27:00.877Z",
+      "uuid": "81edf34c-dbae-11e7-be6b-6aa9b9dbfcd4", "name": "Gender Code X", "definition":
+      "<p>The gender of a person.</p>", "workgroup": null, "submitter": 10, "_is_public":
+      false, "_is_locked": false, "short_name": "", "version": "", "synonyms": "",
+      "references": "", "origin_URI": "", "comments": "", "submitting_organisation":
+      "", "responsible_organisation": "", "superseded_by": null}}]'}
+  model: reversion.version
+  pk: 110
+- fields: {content_type: 21, db: default, format: json, object_id: '57', object_repr: Gender
+      Code X, revision: 20, serialized_data: '[{"model": "aristotle_mdr.valuedomain",
+      "pk": 57, "fields": {"data_type": null, "format": "", "maximum_length": null,
+      "unit_of_measure": null, "conceptual_domain": null, "description": ""}}]'}
+  model: reversion.version
+  pk: 111
+- fields: {content_type: 11, db: default, format: json, object_id: '57', object_repr: Gender
+      Code X, revision: 20, serialized_data: '[{"model": "aristotle_mdr._concept",
+      "pk": 57, "fields": {"created": "2017-12-08T00:27:00.873Z", "modified": "2017-12-08T00:27:24.496Z",
+      "uuid": "81edf34c-dbae-11e7-be6b-6aa9b9dbfcd4", "name": "Gender Code X", "definition":
+      "<p>The gender of a person.</p>", "workgroup": null, "submitter": 10, "_is_public":
+      false, "_is_locked": false, "short_name": "", "version": "", "synonyms": "",
+      "references": "", "origin_URI": "", "comments": "", "submitting_organisation":
+      "", "responsible_organisation": "", "superseded_by": null}}]'}
+  model: reversion.version
+  pk: 112
+- fields: {content_type: 22, db: default, format: json, object_id: '5', object_repr: 'Gender
+      Code X: M - Male', revision: 20, serialized_data: '[{"model": "aristotle_mdr.permissiblevalue",
+      "pk": 5, "fields": {"value": "M", "meaning": "Male", "value_meaning": null,
+      "valueDomain": 57, "order": 0, "start_date": null, "end_date": null}}]'}
+  model: reversion.version
+  pk: 113
+- fields: {content_type: 21, db: default, format: json, object_id: '57', object_repr: Gender
+      Code X, revision: 21, serialized_data: '[{"model": "aristotle_mdr.valuedomain",
+      "pk": 57, "fields": {"data_type": null, "format": "", "maximum_length": null,
+      "unit_of_measure": null, "conceptual_domain": null, "description": ""}}]'}
+  model: reversion.version
+  pk: 114
+- fields: {content_type: 22, db: default, format: json, object_id: '5', object_repr: 'Gender
+      Code X: M - Male', revision: 21, serialized_data: '[{"model": "aristotle_mdr.permissiblevalue",
+      "pk": 5, "fields": {"value": "M", "meaning": "Male", "value_meaning": null,
+      "valueDomain": 57, "order": 1, "start_date": null, "end_date": null}}]'}
+  model: reversion.version
+  pk: 115
+- fields: {content_type: 11, db: default, format: json, object_id: '57', object_repr: Gender
+      Code X, revision: 21, serialized_data: '[{"model": "aristotle_mdr._concept",
+      "pk": 57, "fields": {"created": "2017-12-08T00:27:00.873Z", "modified": "2017-12-08T00:28:05.760Z",
+      "uuid": "81edf34c-dbae-11e7-be6b-6aa9b9dbfcd4", "name": "Gender Code X", "definition":
+      "<p>The gender of a person.</p>", "workgroup": null, "submitter": 10, "_is_public":
+      false, "_is_locked": false, "short_name": "", "version": "", "synonyms": "",
+      "references": "", "origin_URI": "", "comments": "", "submitting_organisation":
+      "", "responsible_organisation": "", "superseded_by": null}}]'}
+  model: reversion.version
+  pk: 116
+- fields: {content_type: 22, db: default, format: json, object_id: '6', object_repr: 'Gender
+      Code X: F - Female', revision: 21, serialized_data: '[{"model": "aristotle_mdr.permissiblevalue",
+      "pk": 6, "fields": {"value": "F", "meaning": "Female", "value_meaning": null,
+      "valueDomain": 57, "order": 1, "start_date": null, "end_date": null}}]'}
+  model: reversion.version
+  pk: 117
+- fields: {content_type: 22, db: default, format: json, object_id: '7', object_repr: 'Gender
+      Code X: O - Other', revision: 21, serialized_data: '[{"model": "aristotle_mdr.permissiblevalue",
+      "pk": 7, "fields": {"value": "O", "meaning": "Other", "value_meaning": null,
+      "valueDomain": 57, "order": 2, "start_date": null, "end_date": null}}]'}
+  model: reversion.version
+  pk: 118
+- fields: {content_type: 14, db: default, format: json, object_id: '58', object_repr: Address,
+    revision: 22, serialized_data: '[{"model": "aristotle_mdr.objectclass", "pk":
+      58, "fields": {}}]'}
+  model: reversion.version
+  pk: 119
+- fields: {content_type: 11, db: default, format: json, object_id: '58', object_repr: Address,
+    revision: 22, serialized_data: '[{"model": "aristotle_mdr._concept", "pk": 58,
+      "fields": {"created": "2017-12-08T00:29:05.290Z", "modified": "2017-12-08T00:29:05.297Z",
+      "uuid": "cc167584-dbae-11e7-9055-6aa9b9dbfcd4", "name": "Address", "definition":
+      "<p>A place of residence.</p>", "workgroup": null, "submitter": 10, "_is_public":
+      false, "_is_locked": false, "short_name": "", "version": "", "synonyms": "",
+      "references": "", "origin_URI": "", "comments": "", "submitting_organisation":
+      "", "responsible_organisation": "", "superseded_by": null}}]'}
+  model: reversion.version
+  pk: 120
