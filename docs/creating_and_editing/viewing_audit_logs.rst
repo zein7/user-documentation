@@ -15,7 +15,7 @@ Go down to "Easy Audit Application" and select "CRUD Events"
 .. screenshot::
    :server_path: /django/admin/
    :login: {'url': '/login', "username": "alice", "password": "Administrator"}
-   :clicker: a[href="/django/admin/easyaudit/crudevent/"]
+   :clicker:
    
 You can search for different items and can filter results, and even select the day you want to see the sudit logs from
  
