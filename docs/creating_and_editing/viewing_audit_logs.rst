@@ -17,8 +17,6 @@ Go down to "Easy Audit Application" and select "CRUD Events"
    :login: {'url': '/login', "username": "alice", "password": "Administrator"}
    :clicker:
    
-   import time
-   time.sleep(5)
 
    
 You can search for different items and can filter results, and even select the day you want to see the sudit logs from
