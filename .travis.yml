@@ -1,6 +1,10 @@
 # Lets run on the new infrastructure
-sudo: false
-dist: trusty
+# sudo: false
+# dist: trusty
+
+# lets run on the old
+sudo: required 
+dist: precise
 
 language: python
 python:
