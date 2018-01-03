@@ -26,3 +26,4 @@ In this section
    comparing_two_items.rst
    viewing_audit_logs.rst
    viewing_and_adding_registration_authorities.rst
+   accepting_or_rejecting_review_requests.rst
