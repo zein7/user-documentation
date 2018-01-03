@@ -5,6 +5,7 @@
 # lets run on the old
 sudo: required 
 dist: trusty
+group: deprecated-2017Q4
 
 language: python
 python:
