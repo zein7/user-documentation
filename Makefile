@@ -1,4 +1,5 @@
 all:
+	apt-get install libpq-dev python-dev
 	./scripts/prepare_server.sh
 	./scripts/start_server.sh
 	# - SELENIUM_DRIVER="selenium.webdriver.Chrome" tox -e docs-strict
