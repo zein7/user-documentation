@@ -25,7 +25,7 @@ addons:
     sources:
       - google-chrome
     packages:
-      - google-chrome-beta
+      - google-chrome-stable
 
 script:
   - ./scripts/prepare_server.sh
