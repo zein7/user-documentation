@@ -19,13 +19,10 @@ before_script:
   - mkdir chromedriver
   - unzip chromedriver_linux64.zip -d chromedriver
   - export PATH=$PATH:$PWD/chromedriver
+  - google-chrome-stable --headless --disable-gpu --remote-debugging-port=9222 http://localhost &
 
 addons:
-  apt:
-    sources:
-      - google-chrome
-    packages:
-      - google-chrome-stable
+  chrome: stable
 
 script:
   - ./scripts/prepare_server.sh
