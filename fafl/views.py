@@ -35,7 +35,8 @@ def build(timeout=10, build_dir=None, source_dir=None):
     p.wait()
     out, err = p.communicate()
     code = p.returncode
-
+    print(out)
+    print(err)
     return (code, out, err)
 
 filename = 'index'
@@ -61,6 +62,8 @@ def edit(request):
     branch_build_path = os.path.join(branch_html_dir, 'index.html')
 
     rst=""
+    err=""
+    out=""
     if request.method == 'POST':
         rst = request.POST['code']
         write_file(branch_source_path, request.POST['code'])
@@ -71,7 +74,7 @@ def edit(request):
                 render_to_string('fafl/err.html', context={'err':err, 'out':out})
             )
 
-    return render(request, 'fafl/edit.html', context={'filename':filename, 'rst':rst})
+    return render(request, 'fafl/edit.html', context={'filename':filename, 'rst':rst, "err": err, "out": out})
 
 
 # @sphinxedit.route('/raw', methods = ['GET', 'POST'])

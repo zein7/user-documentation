@@ -1,4 +1,5 @@
 from django.conf.urls import include, url
+from django.views.generic import TemplateView
 from . import views
 
 
@@ -10,4 +11,5 @@ urlpatterns = [
     url(r'^/reset', views.resetter, name="resetter"),
     url(r'^/raw/(.*)', views.raw),
     url(r'^/help', views.help, name="help"),
+    url(r'^/test/$', TemplateView.as_view(template_name='fafl/test.html')),
 ]

@@ -29,7 +29,7 @@ DATABASES = {
         'NAME': os.path.join(BASE_DIR, "docs.db"),
     }
 }
-
+print(os.path.join(BASE_DIR, "docs.db"))
 HAYSTACK_CONNECTIONS = {
     'default': {
         #'ENGINE': 'haystack.backends.whoosh_backend.WhooshEngine',
