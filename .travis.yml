@@ -24,6 +24,7 @@ before_script:
 addons:
   chrome: stable
 
+
 script:
   - ./scripts/prepare_server.sh
   - ./scripts/start_server.sh
