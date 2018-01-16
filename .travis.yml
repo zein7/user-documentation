@@ -19,7 +19,7 @@ before_script:
   - mkdir chromedriver
   - unzip chromedriver_linux64.zip -d chromedriver
   - export PATH=$PATH:$PWD/chromedriver
-  - google-chrome-stable --headless --disable-gpu --no-sandbox --remote-debugging-port=9222 http://localhost &
+  - chrome --headless --disable-gpu --no-sandbox --remote-debugging-port=9222 http://localhost &
 
 addons:
   chrome: stable
@@ -28,7 +28,7 @@ addons:
 script:
   - ./scripts/prepare_server.sh
   - ./scripts/start_server.sh
-  - SELENIUM_DRIVER="selenium.webdriver.Chrome" tox -e docs-strict
+  - SELENIUM_DRIVER="selenium.webdriver.Firefox" tox -e docs-strict
   # - tox -e docs-strict
   - tox -e docs-text-index
   - cp -r docs/_build/text/* docs/_build/html/_sources
