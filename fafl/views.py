@@ -133,9 +133,10 @@ def dumper(request):
         call_command(
             'dumpdata', format="yaml",
             exclude=[
-                'auth', 'contenttypes', 'aristotle_mdr_help', 'easyaudit',
+                'auth', 'contenttypes', 'aristotle_mdr_help', #'easyaudit',
                 'notifications', 'sessions',
             ],
+            use_natural_foreign_keys=True,
             stdout=out
         )
         dump = out.getvalue()
@@ -199,19 +200,38 @@ def resetter(request):
                 'flush', interactive=False,
                 stdout=out
             )
+            # from django.contrib.contenttypes.models import ContentType
+            # content_types = ContentType.objects.all()
+            # print("\n".join([
+            #     str([ct.pk, ct]) for ct in content_types
+            # ]))
+            dump += out.getvalue ()
+
             call_command(
-                'loaddata', 'users.yaml', format="yaml",
+                'migrate',  interactive=False,
                 stdout=out
             )
+            dump += out.getvalue ()
             call_command(
-                'loaddata', 'iso_metadata.json', format="json",
+                'loaddata', 'server/fixtures/users.yaml', format="yaml",
                 stdout=out
             )
+            dump += out.getvalue ()
             call_command(
-                'loaddata', 'test_metadata.yaml', format="yaml",
+                'loaddata', 'server/fixtures/iso_metadata.json', format="json",
                 stdout=out
             )
-            dump = out.getvalue ()
+            dump += out.getvalue ()
+            call_command(
+                'loaddata', 'server/fixtures/test_metadata.yaml', format="yaml",
+                stdout=out
+            )
+            dump += out.getvalue ()
+            call_command(
+                'rebuild_index', noinput=False,
+                stdout=out
+            )
+            dump += out.getvalue ()
             dumps.append(dump)
         except Exception as e:
             dumps.append(e)
