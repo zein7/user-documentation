@@ -1,4 +1,5 @@
 import os
+import sys
 import json
 import urllib
 from shutil import copyfile, rmtree
@@ -7,7 +8,7 @@ import mimetypes
 
 import sphinx
 from tempfile import mkdtemp
-
+from io import StringIO
 
 # import special tools for this platform
 from .tools import Command, write_file
@@ -18,26 +19,49 @@ from django.template.loader import render_to_string
 
 config_path = 'conf'
 
+class RedirectStdStreams(object):
+    def __init__(self, stdout=None, stderr=None):
+        self._stdout = stdout or sys.stdout
+        self._stderr = stderr or sys.stderr
+
+    def __enter__(self):
+        self.old_stdout, self.old_stderr = sys.stdout, sys.stderr
+        self.old_stdout.flush(); self.old_stderr.flush()
+        sys.stdout, sys.stderr = self._stdout, self._stderr
+
+    def __exit__(self, exc_type, exc_value, traceback):
+        self._stdout.flush(); self._stderr.flush()
+        sys.stdout = self.old_stdout
+        sys.stderr = self.old_stderr
+
+
 
 def build(timeout=10, build_dir=None, source_dir=None):
-    # Replace this terrible implementation
-    config_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'conf')
-    source_path = source_dir #join('repos', 'source')
-    build_path = build_dir #join('repos', 'build/html')
-    command = ['sphinx-build', '-c', config_path, source_path, build_path]
-
-    import subprocess
-
-    p = subprocess.Popen(command,
-        stdout=subprocess.PIPE,
-        stderr=subprocess.PIPE
-    )
-    p.wait()
-    out, err = p.communicate()
-    code = p.returncode
-    print(out)
-    print(err)
-    return (code, out, err)
+    from sphinx.application import Sphinx
+    from sphinx.cmdline import handle_exception
+    import optparse
+    
+    srcdir = source_dir
+    confdir = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'conf')
+    outdir = build_dir
+    doctreedir = os.path.abspath(os.path.join(outdir, '.doctrees'))
+    builder = 'html'
+    out = StringIO()
+    err = StringIO()
+    opts, args = optparse.OptionParser().parse_args([])
+    with RedirectStdStreams(stdout=out, stderr=err):
+    #     None
+    # if True:
+        app = Sphinx(srcdir, confdir, outdir, doctreedir, builder,
+            #confoverrides, status, warning, args.freshenv,
+            # args.warningiserror, args.tags, args.verbosity, args.jobs
+        )
+        try:
+            app.build() #args.force_all, filenames)
+            return (app.statuscode, out.getvalue(), err.getvalue())
+        except Exception as e:
+            err_text = handle_exception(app, opts, e, stderr=err)
+            return (-1, out.getvalue(), err.getvalue())
 
 filename = 'index'
 base_dir = '/tmp/fafl/'
