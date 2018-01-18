@@ -226,6 +226,10 @@ def resetter(request):
                 'loaddata', 'server/fixtures/test_metadata.yaml', format="yaml",
                 stdout=out
             )
+            call_command(
+                'load_aristotle_help',
+                stdout=out
+            )
             dump += out.getvalue ()
             call_command(
                 'rebuild_index', noinput=False,
