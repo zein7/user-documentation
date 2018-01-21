@@ -19,7 +19,7 @@ Go down to "Easy Audit Application" and select "CRUD Events"
    
 
    
-You can search for different items and can filter results, and even select the day you want to see the sudit logs from
+You can search for different items and can filter results, and even select the day you want to see the audit logs from
  
 
 
