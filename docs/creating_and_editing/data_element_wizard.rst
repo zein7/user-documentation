@@ -57,7 +57,7 @@ In step four the Object Class and Property will come together to form a Data Ele
       ]
 
    import time
-   time.sleep(1)
+   time.sleep(4)
 
 Now we are going to create the Value Domain for the Data Element. 
 
@@ -77,7 +77,7 @@ In step six, you will be able to review the whole Data Element. The definition w
       ]
 
    import time
-   time.sleep(1)
+   time.sleep(4)
 
 After reviewing the Data Element and selecting "next", you will be taken to a page that will let you see all the new items you are about to create. You can go back and edit if necessary, or select "I've reviewed these items and wish to create them." This is required, after selecting that you can click "next" and you new items will be created. You will be taken to the new Data Element page, where you will be able to see all the connections between the different items created.
 
