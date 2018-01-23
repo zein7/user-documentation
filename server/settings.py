@@ -67,7 +67,7 @@ INSTALLED_APPS = (
     # The good stuff
     'aristotle_mdr.contrib.self_publish',
     'aristotle_mdr.contrib.links',
-    'fafl'
+    'fafl',
 ) + INSTALLED_APPS
 
 

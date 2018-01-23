@@ -133,7 +133,8 @@ def dumper(request):
         call_command(
             'dumpdata', format="yaml",
             exclude=[
-                'auth', 'contenttypes', 'aristotle_mdr_help', #'easyaudit',
+                'auth', 'contenttypes', 'aristotle_mdr_help',
+                'easyaudit', # Not sure I want this yet
                 'notifications', 'sessions',
             ],
             use_natural_foreign_keys=True,
