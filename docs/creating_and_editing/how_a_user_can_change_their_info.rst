@@ -1,7 +1,7 @@
 How a User can Change Their Information
 =======================================
 
-1. Go to "My Dashboard" and in the left side menu, and click the cog icon. 
+Go to "My Dashboard" and in the left side menu, and click the cog icon. 
 
 .. screenshot::
    :server_path: /account/home
@@ -10,7 +10,7 @@ How a User can Change Their Information
    :crop_element: div#dashboard-nav a[href="/account/edit"]
    :crop_element_padding: [40, 300, 40, 300]
 
-2. This lets the user change their account details, like their name and email address.
+This lets the user change their account details, like their name and email address.
 
 .. screenshot::
    :server_path: /account/edit
@@ -19,7 +19,7 @@ How a User can Change Their Information
    :crop_element_padding: [40, 300, 40, 300]
 
 
-3. If they want to change their password they have to click the cog icon and a drop down box will appear that says "change password".
+If they want to change their password they have to click the cog icon and a drop down box will appear that says "change password".
 
 .. screenshot::
    :server_path: /account/edit
@@ -27,8 +27,9 @@ How a User can Change Their Information
    :crop_element: div#dashboard-nav a[href="/account/password/change"]
    :crop_element_padding: [40, 300, 40, 300]
    
-4. The user can then change their password.
+The user can then change their password.
 
 .. screenshot::
    :server_path: /account/password/change
-   :alt:
+   :crop_element: div[id="content"]
+   :crop_element_padding: 100,-200,0,0
