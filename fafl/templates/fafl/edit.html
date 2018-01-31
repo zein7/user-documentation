@@ -1,13 +1,8 @@
+{% extends "fafl/base.html" %}
+
+{% block title %}Fancy Editor For Sphinx - Home{% endblock%}
+
 <!doctype html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-
-    <title>{% block title %}Fancy Editor For Sphinx{% endblock%}</title>
-
-    <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 
 {% block scripts %}
 <link rel="stylesheet" href="https://codemirror.net/lib/codemirror.css">
@@ -25,10 +20,6 @@
 <script src="https://codemirror.net/addon/scroll/annotatescrollbar.js"></script>
 <script src="https://codemirror.net/addon/search/matchesonscrollbar.js"></script>
 <script src="https://codemirror.net/addon/search/jump-to-line.js"></script>
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/semantic-ui/2.2.10/semantic.min.css">
-<script src="https://cdn.jsdelivr.net/semantic-ui/2.2.10/semantic.min.js"></script>
-<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 
 <script>
   var is_changed = 0;
@@ -63,45 +54,10 @@
 
 </script>
 
-
-<style>
-.flex-container {
-    display: -webkit-flex;
-    display: flex;
-    width: auto;
-    height: 90vh;
-    background-color: #7799CC;
-}
-
-.CodeMirror {
-    border: 1px solid #eee;
-    height: 65vh;
-}
-
-.flex-item, .flex-item-rigid {
-    width: 50%;
-    height: auto;
-    margin: 10px;
-}
-.flex-item {
-    overflow: scroll;
-}
-button
-{
-    margin: -1px;
-    padding: 0px;
-}
-div.bodywrapper {
-    margin: 0 0 0 0px;
-}
-</style>
 {% endblock %}
 
-  </head>
 
-  <body role="document">
-  <div class="body" role="main">
-    <div class="flex-container" align="left">
+{% block content %}
       <div class="flex-item-rigid">
         <p style="line-height: 200%;">
           <div class="ui icon buttons">
@@ -165,7 +121,14 @@ div.bodywrapper {
       <iframe id="html_view" class="flex-item" src="/fafl/raw" onload="document.getElementById('html_view').scrollTop = 200;">
       </iframe>
     </div>
-  </div>
-
-</body>
-</html>
+    <div>
+      Output:
+      <pre>
+        {{out}}
+      </pre>
+      Errors:
+      <pre>
+        {{err}}
+      </pre>
+    </div>
+{% endblock %}

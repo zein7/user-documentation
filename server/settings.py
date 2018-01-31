@@ -29,7 +29,7 @@ DATABASES = {
         'NAME': os.path.join(BASE_DIR, "docs.db"),
     }
 }
-
+print(os.path.join(BASE_DIR, "docs.db"))
 HAYSTACK_CONNECTIONS = {
     'default': {
         #'ENGINE': 'haystack.backends.whoosh_backend.WhooshEngine',
@@ -67,7 +67,7 @@ INSTALLED_APPS = (
     # The good stuff
     'aristotle_mdr.contrib.self_publish',
     'aristotle_mdr.contrib.links',
-    'fafl'
+    'fafl',
 ) + INSTALLED_APPS
 
 
@@ -84,10 +84,10 @@ ARISTOTLE_SETTINGS['SITE_INTRO'] = "Use Aristotle Metadata Registry to search fo
 ARISTOTLE_SETTINGS['SITE_BRAND'] =  '/aristotle_mdr/images/aristotle_small.png'
 
 
-ARISTOTLE_SETTINGS['BULK_ACTIONS'] = ARISTOTLE_SETTINGS['BULK_ACTIONS']+[
-    'aristotle_mdr.forms.bulk_actions.QuickPDFDownloadForm',
-    'aristotle_mdr.contrib.slots.forms.BulkAssignSlotsForm',
-]
+# ARISTOTLE_SETTINGS['BULK_ACTIONS'] = ARISTOTLE_SETTINGS['BULK_ACTIONS']+[
+#     'aristotle_mdr.forms.bulk_actions.QuickPDFDownloadForm',
+#     'aristotle_mdr.contrib.slots.forms.BulkAssignSlotsForm',
+# ]
 
 ROOT_URLCONF = 'server.urls'
 

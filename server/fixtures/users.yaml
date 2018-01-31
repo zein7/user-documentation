@@ -1,0 +1,99 @@
+--- 
+- 
+  fields: 
+    date_joined: "2016-05-02T22:23:10.627Z"
+    email: possum@aristotle.example.com
+    first_name: Possum
+    is_active: true
+    is_staff: true
+    is_superuser: true
+    last_login: ~
+    last_name: ""
+    password: rot13$
+    username: possum
+  model: auth.user
+  pk: 2
+- 
+  fields: 
+    date_joined: "2016-05-02T22:23:10.627Z"
+    email: alice@aristotle.example.com
+    first_name: Alice
+    is_active: true
+    is_staff: true
+    is_superuser: true
+    last_login: ~
+    last_name: Administrator
+    password: rot13$Administrator
+    username: alice
+  model: auth.user
+  pk: 10
+- 
+  fields: 
+    date_joined: "2016-05-02T22:23:10.734Z"
+    email: vicky@aristotle.example.com
+    first_name: Vicky
+    is_active: true
+    is_staff: false
+    is_superuser: false
+    last_login: ~
+    last_name: Viewer
+    password: rot13$Viewer
+    username: vicky
+  model: auth.user
+  pk: 3
+- 
+  fields: 
+    date_joined: "2016-05-02T22:23:10.862Z"
+    email: stewie@aristotle.example.com
+    first_name: Stewie
+    is_active: true
+    is_staff: false
+    is_superuser: false
+    last_login: ~
+    last_name: Steward
+    password: rot13$Steward
+    username: stewie
+  model: auth.user
+  pk: 4
+- 
+  fields: 
+    date_joined: "2016-05-02T22:23:10.989Z"
+    email: mandy@aristotle.example.com
+    first_name: Mandy
+    is_active: true
+    is_staff: false
+    is_superuser: false
+    last_login: ~
+    last_name: Manager
+    password: rot13$Manager
+    username: mandy
+  model: auth.user
+  pk: 5
+- 
+  fields: 
+    date_joined: "2016-05-02T22:23:11.113Z"
+    email: suzie@aristotle.example.com
+    first_name: Suzie
+    is_active: true
+    is_staff: false
+    is_superuser: false
+    last_login: ~
+    last_name: Submitter
+    password: rot13$Submitter
+    username: suzie
+  model: auth.user
+  pk: 6
+- 
+  fields: 
+    date_joined: "2016-05-02T22:23:11.603Z"
+    email: reggie@aristotle.example.com
+    first_name: Reggie
+    is_active: true
+    is_staff: false
+    is_superuser: false
+    last_login: ~
+    last_name: Registrar
+    password: rot13$Registrar
+    username: reggie
+  model: auth.user
+  pk: 7

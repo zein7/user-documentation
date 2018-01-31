@@ -1,7 +1,7 @@
 from django.conf.urls import include, url
 
 urlpatterns = [
-    url(r'^fafl', include('fafl.urls')),
+    url(r'^fafl', include('fafl.urls', namespace="fafl")),
     url(r'^', include('aristotle_cloud.urls')),
     url(r'^publish/', include('aristotle_mdr.contrib.self_publish.urls', app_name="aristotle_self_publish", namespace="aristotle_self_publish")),
     url(r'^', include('aristotle_mdr.contrib.links.urls', app_name="aristotle_mdr_links", namespace="aristotle_links")),

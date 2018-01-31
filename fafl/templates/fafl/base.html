@@ -1,0 +1,81 @@
+<!doctype html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <title>{% block title %}Fancy Editor For Sphinx{% endblock%}</title>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/semantic-ui/2.2.10/semantic.min.css">
+<script src="https://cdn.jsdelivr.net/semantic-ui/2.2.10/semantic.min.js"></script>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+{% block scripts %}
+
+
+{% endblock %}
+<style>
+.flex-container {
+    display: -webkit-flex;
+    display: flex;
+    width: auto;
+    height: 90vh;
+    background-color: #7799CC;
+}
+
+.CodeMirror {
+    border: 1px solid #eee;
+    height: 65vh;
+}
+
+.flex-item, .flex-item-rigid {
+    width: 50%;
+    height: auto;
+    margin: 10px;
+}
+.flex-item {
+    overflow: scroll;
+}
+button
+{
+    margin: -1px;
+    padding: 0px;
+}
+div.bodywrapper {
+    margin: 0 0 0 0px;
+}
+</style>
+
+  </head>
+
+  <body role="document">
+  <div class="body" role="main">
+        <p style="line-height: 200%;">
+          
+          <a href="{% url 'fafl:home' %}" class='ui button'>
+            <i class='home icon'></i> FAFL Home</a>
+          <span class="ui icon buttons">
+            <a href="{% url 'fafl:editor' %}" class='ui button'>
+            <i class='edit icon'></i> Editor</a>
+            <a href="{% url 'fafl:dumper' %}"class='ui button'>
+            <i class='cloud download icon'></i> Dumper</a>
+            <a href="{% url 'fafl:loader' %}"class='ui button'>
+            <i class='cloud upload icon'></i> Loader</a>
+            <a href="{% url 'fafl:help' %}" class='ui button'>
+            <i class='help circle icon'></i> Help</a>
+          </span>
+        </p>
+    <div class="flex-container" align="top">
+      <div>
+        
+      </div>
+      {% block content %}
+      {% endblock %}
+    </div>
+  </div>
+
+</body>
+</html>

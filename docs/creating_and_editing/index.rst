@@ -20,3 +20,9 @@ In this section
    how_a_user_can_change_their_info.rst
    how_to_add_a_workgroup.rst
    request_review_for_metadata_item.rst
+   create_and_participate_in_discussions.rst
+   how_to_change_the_registration_status_of_an_item.rst
+   deactivating_a_user.rst
+   comparing_two_items.rst
+   viewing_and_adding_registration_authorities.rst
+   accepting_or_rejecting_review_requests.rst

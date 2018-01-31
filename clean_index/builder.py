@@ -19,9 +19,9 @@ def setup(app):
     app.add_builder(CleanTextBuilder)
     app.set_translator(name="index_text", translator_class=CleanIndexWriter)
 
-    if app.buildername == "index_text":
-        app.add_directive('screenshot', NullDirective)
-        app.add_directive('contents', NullDirective)
+    # if app.buildername == "index_text":
+    # app.add_directive('screenshot', NullDirective)
+    # app.add_directive('contents', NullDirective)
 
     return {
         'version': 1,

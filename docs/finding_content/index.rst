@@ -15,6 +15,7 @@ All about finding stuff
    searching.rst
    browsing.rst
    item_page.rst
+   breaking_down_search_results.rst
 
 
 .. screenshot::

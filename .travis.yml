@@ -1,27 +1,37 @@
 # Lets run on the new infrastructure
-sudo: false
+# sudo: false
+# dist: trusty
+
+# lets run on the old
+# sudo: required 
 dist: trusty
+group: deprecated-2017Q4
 
 language: python
 python:
-  - "2.7"
+  - "3.6"
 
 install:
   - pip install tox
 
-# before_script:
-#   - wget http://chromedriver.storage.googleapis.com/2.29/chromedriver_linux64.zip
-#   - mkdir chromedriver
-#   - unzip chromedriver_linux64.zip -d chromedriver
-#   - export PATH=$PATH:$PWD/chromedriver
+before_script:
+  - wget http://chromedriver.storage.googleapis.com/2.35/chromedriver_linux64.zip
+  - mkdir chromedriver
+  - unzip chromedriver_linux64.zip -d chromedriver
+  - export PATH=$PATH:$PWD/chromedriver
+  - google-chrome-stable --headless --disable-gpu --no-sandbox --remote-debugging-port=9222 http://localhost &
+
+addons:
+  chrome: stable
+
 
 script:
   - ./scripts/prepare_server.sh
   - ./scripts/start_server.sh
-  # - SELENIUM_DRIVER="selenium.webdriver.Chrome" tox -e docs-strict
-  - tox -e docs-strict
-  - tox -e docs-text-index
-  - cp -r docs/_build/text/* docs/_build/html/_sources
+  - SELENIUM_DRIVER="selenium.webdriver.Chrome" tox -e docs-strict
+  # - tox -e docs-strict
+  # - tox -e docs-text-index
+  # - cp -r docs/_build/text/* docs/_build/html/_sources
 
 after_script:
   - ./scripts/teardown_server.sh

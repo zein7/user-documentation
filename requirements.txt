@@ -1,4 +1,4 @@
-psycopg2==2.6.1
+psycopg2>2.7.0
 dj-database-url
 Django>1.10,<1.11
 
@@ -10,4 +10,4 @@ waitress
 -r requirements.docs.txt
 
 aristotle-metadata-registry>=1.6.3
-git+https://data61.githost.io/aristotle/aristotle-cloud.git@1.6#egg=aristotle-cloud-0.0.1
+git+https://data61.githost.io/aristotle/aristotle-cloud.git@v1.6.0rc4#egg=aristotle-cloud-0.0.1
