@@ -1,6 +1,9 @@
 How to Accept or Reject Review Requests
 =======================================
 
+In this section we are going to run through the steps of how to accept or reject an item or items that have been submitted to
+an Administrator or Registrar for review.
+
 .. note:: You must be either an Administrator or Registrar to accept or reject review requests
 
 First, go to your Dashboard sidepanel and select "Registrar Tools"
