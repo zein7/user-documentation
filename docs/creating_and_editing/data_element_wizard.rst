@@ -1,6 +1,8 @@
 Using wizards to link metadata to create a data element
 =======================================================
 
+These wizards run through the creation of a whole data element, it helps you reuse already created items and/or create new object classes, properties, and value domains. 
+
 To access the creation wizards, go to "create metadata" on your Dashboard side panel or the creation drop-down menu
 on the header bar and select "See all.." to be taken to the Create Items page.
 
@@ -17,7 +19,7 @@ We are going to create a Data Element using a wizard. To start creating select "
 This is the first step, to be helpful the wizard will try to help you find content that has already been 
 created in the registry. 
 
-To proceed with creating a Date Element, it is required that you put in an Object Class name, a Property name, and a Value Class name. Keywords are not required, but can be used to help narrow down the search results. 
+To proceed with creating a Date Element, it is required that you put in an Object Class name, a Property name, and a Value Domain name. Keywords are not required, but can be used to help narrow down the search results. 
 
 .. screenshot::
    :server_path: /create/wizard/aristotle_mdr/dataelement
