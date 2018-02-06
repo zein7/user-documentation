@@ -1,7 +1,9 @@
 How to Compare Two Items Together
 =================================
 
-Go to your "Homepage", this is the page that you land on when logging into the system
+This "comparator" tool lets you compare two different metadata items together.
+
+To get started, go to your "Homepage", this is the page that you land on when logging into the system
 
 .. screenshot::
    :server_path: /
