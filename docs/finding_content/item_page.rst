@@ -27,7 +27,7 @@ Some of the content in the "info box" my not be viewable by some users, dependin
 
 .. screenshot::
    :server_path: /item/43/dataelementconcept/employeefirst-day-of-employment
-   :alt: main content area
+   :alt: "info box"
    :crop_element: div[id="content"]
    :crop_element_padding: [-50, 50, -300, -700]
 
@@ -36,7 +36,7 @@ and download the content.
 
 .. screenshot::
    :server_path: /item/43/dataelementconcept/employeefirst-day-of-employment
-   :alt: main content area
+   :alt: action bar
    :crop_element: div[id="content"]
    :crop_element_padding: [-10, -10, -675, -750] 
 
