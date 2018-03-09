@@ -1,19 +1,48 @@
 Using wizards to create metadata
 ================================
 
-Before
+To get to the creation wizards, go to "create metadata" on your dashboard side panel, or the creation tool in the header bar and select "see all..."
 
+Data element and data element concept wizards
+----------------------------------------------
 
+Wizards help make metadata creation and reuse of metadata items easier. Using these wizards, you will be stepped through creating either a Data Element, and within the wizard you will create an object class, property, and value domain. Or, you can select to create a Data Element Concept, where you will create an object class and a property.
+
+.. screenshot:: 
+   :server_path: /create
+   :login: {'url': '/login', "username": "vicky", "password": "Viewer"}
+   :crop_element: ul[class="list-group"]
+   :crop_element_padding: (200,50,10,50)
+   
+This is the form you will see when selecting to create a new data element
+
+.. screenshot:: 
+   :server_path: /create/wizard/aristotle_mdr/dataelement
+   :login: {'url': '/login', "username": "vicky", "password": "Viewer"}
+
+Single item creation wizards
+----------------------------
+
+These wizards are useful if you know you want to create just one item
+
+.. screenshot:: 
+   :server_path: /create
+   :login: {'url': '/login', "username": "vicky", "password": "Viewer"}
+   :crop_element: div[class="container admin-wrap"]
+   :crop_element_padding: (-420,50,10,50)
+   
+This is the form you will see when selecting to create an object class   
+   
 .. screenshot:: 
    :server_path: /create/aristotle_mdr/objectclass
    :alt: A basic search screen
    :login: {'url': '/login', "username": "vicky", "password": "Viewer"}
    :form_data: [
-      {'initial-name': 'Person', 'initial-definition': 'Something', '__submit__': False}
+      {'initial-name': 'Person', 'initial-definition': 'Something', '__submit__': False}  
       ]
-
-After:
-
+      
+Because reuse is important, each wizard will search for the name of your item and give you results if there are any matching or similar to your item      
+        
 .. screenshot:: 
    :form_data: [
       {'initial-name': 'Person', 'initial-definition': 'Something', '__submit__': True},
@@ -21,19 +50,4 @@ After:
       
    import time
    time.sleep(2)
-
-
-
-More after:
-
-.. screenshot:: 
-   :alt: A basic search screen
-   :clicker: a[href="#tab_names"]
-   :box: *[id="tab_names"]
-   :form_data: [
-      {'results-references': 'Person', '__submit__': False},
-      ]
-
-   import time
-   time.sleep(2)
-   browser.find_element_by_css_selector('a[href="#tab_names"]').click()
+   
