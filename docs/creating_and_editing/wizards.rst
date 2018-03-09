@@ -38,14 +38,14 @@ This is the form you will see when selecting to create an object class
    :alt: A basic search screen
    :login: {'url': '/login', "username": "vicky", "password": "Viewer"}
    :form_data: [
-      {'initial-name': 'Person', 'initial-definition': 'Something', '__submit__': False}  
+      {'initial-name': 'Person', 'initial-definition': 'A human being.', '__submit__': False}  
       ]
       
 Because reuse is important, each wizard will search for the name of your item and give you results if there are any matching or similar to your item      
         
 .. screenshot:: 
    :form_data: [
-      {'initial-name': 'Person', 'initial-definition': 'Something', '__submit__': True},
+      {'initial-name': 'Person', 'initial-definition': 'A human being.', '__submit__': True},
       ]
       
    import time
