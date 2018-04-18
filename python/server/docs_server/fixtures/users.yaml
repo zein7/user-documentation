@@ -1,99 +1,92 @@
---- 
-- 
-  fields: 
+---
+-
+  fields:
     date_joined: "2016-05-02T22:23:10.627Z"
     email: possum@aristotle.example.com
-    first_name: Possum
+    short_name: Possum
     is_active: true
     is_staff: true
     is_superuser: true
     last_login: ~
-    last_name: ""
+    full_name: ""
     password: rot13$
-    username: possum
-  model: auth.user
+  model: aristotle_mdr_user_management.user
   pk: 2
-- 
-  fields: 
+-
+  fields:
     date_joined: "2016-05-02T22:23:10.627Z"
     email: alice@aristotle.example.com
-    first_name: Alice
+    short_name: Alice
     is_active: true
     is_staff: true
     is_superuser: true
     last_login: ~
-    last_name: Administrator
+    full_name: Administrator
     password: rot13$Administrator
-    username: alice
-  model: auth.user
+  model: aristotle_mdr_user_management.user
   pk: 10
-- 
-  fields: 
+-
+  fields:
     date_joined: "2016-05-02T22:23:10.734Z"
     email: vicky@aristotle.example.com
-    first_name: Vicky
+    short_name: Vicky
     is_active: true
     is_staff: false
     is_superuser: false
     last_login: ~
-    last_name: Viewer
+    full_name: Viewer
     password: rot13$Viewer
-    username: vicky
-  model: auth.user
+  model: aristotle_mdr_user_management.user
   pk: 3
-- 
-  fields: 
+-
+  fields:
     date_joined: "2016-05-02T22:23:10.862Z"
     email: stewie@aristotle.example.com
-    first_name: Stewie
+    short_name: Stewie
     is_active: true
     is_staff: false
     is_superuser: false
     last_login: ~
-    last_name: Steward
+    full_name: Steward
     password: rot13$Steward
-    username: stewie
-  model: auth.user
+  model: aristotle_mdr_user_management.user
   pk: 4
-- 
-  fields: 
+-
+  fields:
     date_joined: "2016-05-02T22:23:10.989Z"
     email: mandy@aristotle.example.com
-    first_name: Mandy
+    short_name: Mandy
     is_active: true
     is_staff: false
     is_superuser: false
     last_login: ~
-    last_name: Manager
+    full_name: Manager
     password: rot13$Manager
-    username: mandy
-  model: auth.user
+  model: aristotle_mdr_user_management.user
   pk: 5
-- 
-  fields: 
+-
+  fields:
     date_joined: "2016-05-02T22:23:11.113Z"
     email: suzie@aristotle.example.com
-    first_name: Suzie
+    short_name: Suzie
     is_active: true
     is_staff: false
     is_superuser: false
     last_login: ~
-    last_name: Submitter
+    full_name: Submitter
     password: rot13$Submitter
-    username: suzie
-  model: auth.user
+  model: aristotle_mdr_user_management.user
   pk: 6
-- 
-  fields: 
+-
+  fields:
     date_joined: "2016-05-02T22:23:11.603Z"
     email: reggie@aristotle.example.com
-    first_name: Reggie
+    short_name: Reggie
     is_active: true
     is_staff: false
     is_superuser: false
     last_login: ~
-    last_name: Registrar
+    full_name: Registrar
     password: rot13$Registrar
-    username: reggie
-  model: auth.user
+  model: aristotle_mdr_user_management.user
   pk: 7
