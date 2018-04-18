@@ -5,9 +5,7 @@ export DATABASE_PATH=aristotle.db
 cd ./python/server
 cp server.env .env
 
-if [[ $# -eq 0 ]]; then
-    pipenv install --three --dev --skip-lock
-fi
+pipenv install --three --dev --skip-lock
 pipenv run django-admin createcachetable
 pipenv run django-admin migrate --noinput
 pipenv run django-admin migrate --run-syncdb  --noinput
