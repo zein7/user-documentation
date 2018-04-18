@@ -20,7 +20,7 @@ before_script:
   - unzip chromedriver_linux64.zip -d chromedriver
   - export PATH=$PATH:$PWD/chromedriver
   - google-chrome-stable --headless --disable-gpu --no-sandbox --remote-debugging-port=9222 http://localhost &
-  - printf "machine github.com\nlogin github\n${GITHUB_TOKEN}" > ~/.netrc
+  - printf "machine github.com\nlogin github\npassword ${GITHUB_TOKEN}" > ~/.netrc
 
 addons:
   chrome: stable
