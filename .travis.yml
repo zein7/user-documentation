@@ -12,7 +12,7 @@ python:
   - "3.6"
 
 install:
-  - pip install tox
+  - pip install tox pipenv
 
 before_script:
   - wget http://chromedriver.storage.googleapis.com/2.35/chromedriver_linux64.zip
