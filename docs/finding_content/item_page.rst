@@ -37,7 +37,7 @@ and download the content.
 .. screenshot::
    :server_path: /item/43/dataelementconcept/employeefirst-day-of-employment
    :alt: action bar
-   :crop_element: div[id="content"]
-   :crop_element_padding: [-10, -10, -675, -750] 
+   :crop_element: div[id="infobox"]
+   :crop_element_padding: [10, 10, 10, 10] 
 
 

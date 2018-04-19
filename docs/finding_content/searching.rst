@@ -27,28 +27,28 @@ How to refine your results with filters
 
 .. screenshot::
    :server_path: /search?q=person
-   :clicker: i[class="fa fa-puzzle-piece fa-fw"]
+   :clicker: li[data-help-name="item type"]
    :crop: (0,0,900,465)
 
-   browser.find_element_by_css_selector('i.fa-puzzle-piece').click()
+   browser.find_element_by_css_selector('li[data-help-name="item type"]').click()
 
 "Status" lets you choose the status of your items 
 
 .. screenshot::
    :server_path: /search?q=person
-   :clicker: i[class="fa fa-unlock-alt fa-fw"]
+   :clicker: li[data-help-name="status"]
    :crop: (0,0,900,465)
    
-   browser.find_element_by_css_selector('i.fa-unlock-alt').click()
+   browser.find_element_by_css_selector('li[data-help-name="status"]').click()
    
 "Authority" Lets you pick which Registration Authority you would like to see content from
 
 .. screenshot::
    :server_path: /search?q=person
-   :clicker: i[class="fa fa-university fa-fw"]
+   :clicker: li[data-help-name="authority"]
    :crop: (0,0,900,465)
 
-   browser.find_element_by_css_selector('i.fa-university').click()
+   browser.find_element_by_css_selector('li[data-help-name="authority"]').click()
    
 "Modified" You can pick when the content you are searching for was modified, you can be specific as you want
 
