@@ -7,7 +7,7 @@ To deactivate a user, go to your dashboard side panel and click "Administrator T
 
 .. screenshot::
    :server_path: /account/home
-   :login: {'url': '/login', "username": "alice", "password": "Administrator"}
+   :login: {'url': '/login', "username": "alice@aristotle.example.com", "password": "Administrator"}
    :crop_element: nav[id="user_sidebar"]
    :clicker: nav#user_sidebar i[class="fa fa-user-md fa-fw"]
 
@@ -15,14 +15,14 @@ From here, click on the "view all users" link
 
 .. screenshot::
    :server_path: /account/admin
-   :login: {'url': '/login', "username": "alice", "password": "Administrator"}
+   :login: {'url': '/login', "username": "alice@aristotle.example.com", "password": "Administrator"}
    :clicker: a[href="/account/registry/users/"]
    
 Pick the user you are deactivating and select the "manage" button next to their name
   
 .. screenshot::
    :server_path: /account/registry/users/
-   :login: {'url': '/login', "username": "alice", "password": "Administrator"}
+   :login: {'url': '/login', "username": "alice@aristotle.example.com", "password": "Administrator"}
    :clicker: div[class="btn-group"]
    
 You will then be prompted again if you are certain you want to deactivate the user or not

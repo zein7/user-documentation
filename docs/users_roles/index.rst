@@ -57,11 +57,11 @@ Go to you dashboard side panel and select "my roles"
 
 .. screenshot::
    :server_path: /account/home
-   :login: {'url': '/login', "username": "stewie", "password": "Steward"}
+   :login: {'url': '/login', "username": "stewie@aristotle.example.com", "password": "Steward"}
    :clicker: i[class="fa fa-industry fa-fw"]
    
 You will be taken to a page that shows all of your roles
 
 .. screenshot::
    :server_path: /account/roles
-   :login: {'url': '/login', "username": "stewie", "password": "Steward"}
+   :login: {'url': '/login', "username": "stewie@aristotle.example.com", "password": "Steward"}

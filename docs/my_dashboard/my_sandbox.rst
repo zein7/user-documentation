@@ -11,7 +11,7 @@ To access your Sandbox, go to you Dashboard side panel and select "My Sandbox"
 .. screenshot::
    :server_path: /account/home      
    :alt: My Dashboard side panel
-   :login: {'url': '/login', "username": "alice", "password": "Administrator"}
+   :login: {'url': '/login', "username": "alice@aristotle.example.com", "password": "Administrator"}
    :crop_element: nav[id="user_sidebar"] 
    :clicker: a[href="/account/sandbox"]
    

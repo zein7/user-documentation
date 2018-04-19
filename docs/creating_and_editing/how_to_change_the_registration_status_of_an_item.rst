@@ -6,7 +6,7 @@ To change the registration status of an item, go to the item page you want to ch
 .. screenshot::
    :server_path: /account/home
    :alt: An item page
-   :login: {'url': '/login', "username": "reggie", "password": "Registrar"}
+   :login: {'url': '/login', "username": "reggie@aristotle.example.com", "password": "Registrar"}
    :crop_element: nav[id="user_sidebar"]
    :crop_element_padding: 100,200
    :clicker: i[class="fa fa-institution fa-fw"]

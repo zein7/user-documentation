@@ -1,0 +1,27 @@
+[[source]]
+url = "https://pypi.python.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[dev-packages]
+user-documentation = {editable = true, path = "."}
+honcho = "*"
+
+[packages]
+django = "~=1.11.11"
+
+aristotle-metadata-registry = {git = "https://github.com/aristotle-mdr/aristotle-metadata-registry", subdirectory = "python/aristotle-metadata-registry", ref = "develop"}
+aristotle-glossary = {git = "https://github.com/aristotle-mdr/aristotle-metadata-registry", subdirectory = "python/aristotle-glossary", ref = "develop"}
+aristotle-mdr-api = {git = "https://github.com/aristotle-mdr/aristotle-metadata-registry", subdirectory = "python/aristotle-mdr-api", ref = "develop"}
+aristotle-dataset-extensions = {git = "https://github.com/aristotle-mdr/aristotle-metadata-registry", subdirectory = "python/aristotle-dataset-extensions", ref = "develop"}
+aristotle-pdf-downloads = {git = "https://github.com/aristotle-mdr/aristotle-metadata-registry", subdirectory = "python/aristotle-pdf-downloads", ref = "develop"}
+comet-indicator-registry = {git = "https://github.com/aristotle-mdr/aristotle-metadata-registry", subdirectory = "python/comet-indicator-registry", ref = "develop"}
+mallard-questionnaire-registry = {git = "https://github.com/aristotle-mdr/aristotle-metadata-registry", subdirectory = "python/mallard-questionnaire-registry", ref = "develop"}
+
+aristotle-cloud = {git = "https://github.com/aristotle-metadata-enterprises/aristotle-cloud", subdirectory = "python/aristotle-cloud", ref = "develop"}
+aristotle-bg-workers = {git = "https://github.com/aristotle-metadata-enterprises/aristotle-cloud", subdirectory = "python/aristotle-bg-workers", ref = "develop"}
+
+django-data-importer = {ref = "master", git = "https://github.com/LegoStormtroopr/django-data-importer"}
+
+[requires]
+python_version = "3.6.4"

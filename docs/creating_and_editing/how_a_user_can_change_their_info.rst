@@ -6,7 +6,7 @@ Go to "My Dashboard" and in the left side menu, and click the cog icon.
 .. screenshot::
    :server_path: /account/home
    :alt:
-   :login: {'url': '/login', "username": "alice", "password": "Administrator"}
+   :login: {'url': '/login', "username": "alice@aristotle.example.com", "password": "Administrator"}
    :crop_element: div#dashboard-nav a[href="/account/edit"]
    :crop_element_padding: [40, 300, 40, 300]
 

@@ -19,7 +19,7 @@ to open the Actions menu, then select "Open item editor".
 .. screenshot:: 
    :server_path: /item/18
    :alt: A basic search screen
-   :login: {'url': '/login', "username": "alice", "password": "Administrator"}
+   :login: {'url': '/login', "username": "alice@aristotle.example.com", "password": "Administrator"}
    :clicker: i.fa-pencil-square-o
    :browser_height: 733
 
@@ -29,7 +29,7 @@ as shown below:
 
 .. screenshot:: 
    :server_path: /account/django/aristotle_mdr/objectclass/
-   :login: {'url': '/login', "username": "alice", "password": "Administrator"}
+   :login: {'url': '/login', "username": "alice@aristotle.example.com", "password": "Administrator"}
    :alt: A basic search screen
    :browser_height: 1000
 

@@ -5,7 +5,7 @@ This is a basic item page for a Data Element Concept.
 The item pages will change depending on how much content has been put in for the item, and what type of item it is.
 
 .. screenshot::
-   :login: {'url': '/login', "username": "alice", "password": "Administrator"}
+   :login: {'url': '/login', "username": "alice@aristotle.example.com", "password": "Administrator"}
    :server_path: /item/43/dataelementconcept/employeefirst-day-of-employment
    :alt: item page
 
@@ -37,7 +37,7 @@ and download the content.
 .. screenshot::
    :server_path: /item/43/dataelementconcept/employeefirst-day-of-employment
    :alt: action bar
-   :crop_element: div[id="content"]
-   :crop_element_padding: [-10, -10, -675, -750] 
+   :crop_element: div[id="infobox"]
+   :crop_element_padding: [10, 10, 10, 10] 
 
 
