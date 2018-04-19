@@ -8,7 +8,7 @@ How to View and Add Registration Authorities
 .. screenshot:: 
    :server_path: /account/home
    :alt: 
-   :login: {'url': '/login', "username": "alice", "password": "Administrator"}
+   :login: {'url': '/login', "username": "alice@aristotle.example.com", "password": "Administrator"}
    :clicker: #dashboard-nav a[href='/account/admin']
    :browser_height: 733
 

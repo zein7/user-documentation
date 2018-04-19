@@ -5,7 +5,7 @@ To request a review for an item that you haven't requested a review for previous
 
 .. screenshot::
    :server_path: /account/sandbox
-   :login: {'url': '/login', "username": "alice", "password": "Administrator"}
+   :login: {'url': '/login', "username": "alice@aristotle.example.com", "password": "Administrator"}
    :alt: My Sandbox
    :browser_height: 733
    

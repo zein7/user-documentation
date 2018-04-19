@@ -5,7 +5,7 @@ This is a basic item page for a Data Element Concept.
 The item pages will change depending on how much content has been put in for the item, and what type of item it is.
 
 .. screenshot::
-   :login: {'url': '/login', "username": "alice", "password": "Administrator"}
+   :login: {'url': '/login', "username": "alice@aristotle.example.com", "password": "Administrator"}
    :server_path: /item/43/dataelementconcept/employeefirst-day-of-employment
    :alt: item page
 

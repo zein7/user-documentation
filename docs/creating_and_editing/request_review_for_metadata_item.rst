@@ -6,7 +6,7 @@ From the Dashboard side panel, go to "My Sandbox" to view all the items you've c
 
 .. screenshot::
    :server_path: /account/home
-   :login: {'url': '/login', "username": "alice", "password": "Administrator"}
+   :login: {'url': '/login', "username": "alice@aristotle.example.com", "password": "Administrator"}
    :crop_element: a[href="/account/sandbox"]
    :clicker: a[href="/account/sandbox"]
    

@@ -11,7 +11,7 @@ We are going to create a Data Element using a wizard. To start creating select "
 .. screenshot::
    :server_path: /create
    :alt: Create items page
-   :login: {'url': '/login', "username": "vicky", "password": "Viewer"}
+   :login: {'url': '/login', "username": "vicky@aristotle.example.com", "password": "Viewer"}
    :box: a[href="create/wizard/aristotle_mdr/dataelement"]
    :crop_element: a[href="create/wizard/aristotle_mdr/dataelement"]
    :crop_element_padding: 100,200
@@ -24,7 +24,7 @@ To proceed with creating a Date Element, it is required that you put in an Objec
 .. screenshot::
    :server_path: /create/wizard/aristotle_mdr/dataelement
    :alt: A basic search screen
-   :login: {'url': '/login', "username": "vicky", "password": "Viewer"}
+   :login: {'url': '/login', "username": "vicky@aristotle.example.com", "password": "Viewer"}
    :form_data: [
       {'component_search-oc_name': 'Person', 'component_search-pr_name': 'Country of birth', '__submit__': True}
       ]

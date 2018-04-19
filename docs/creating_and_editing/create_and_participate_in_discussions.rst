@@ -11,14 +11,14 @@ Go to you Dashboard
 .. screenshot::
    :server_path: /account/home
    :alt: My dashboard
-   :login: {'url': '/login', "username": "alice", "password": "Administrator"}
+   :login: {'url': '/login', "username": "alice@aristotle.example.com", "password": "Administrator"}
   
 From here, you can select "Discussions" from your side panel 
   
 .. screenshot::
    :server_path: /account/home
    :alt: My dashboard
-   :login: {'url': '/login', "username": "alice", "password": "Administrator"}
+   :login: {'url': '/login', "username": "alice@aristotle.example.com", "password": "Administrator"}
    :clicker: nav#user_sidebar a[href="/discussions"]
    :browser_height: 300
    

@@ -15,7 +15,7 @@ The following steps are ways to capture this infomation for an existing metadata
 .. screenshot:: 
    :server_path: /item/18
    :alt: Screenshot of a person metadata item
-   :login: {'url': '/login', "username": "suzie", "password": "Submitter"}
+   :login: {'url': '/login', "username": "suzie@aristotle.example.com", "password": "Submitter"}
    :clicker: i.fa-pencil-square-o
    :browser_height: 733
    

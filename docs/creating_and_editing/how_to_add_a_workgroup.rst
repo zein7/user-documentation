@@ -8,7 +8,7 @@ How to Add a Workgroup
 .. screenshot::
    :server_path: /account/admin
    :alt: 
-   :login: {'url': '/login', "username": "alice", "password": "Administrator"}
+   :login: {'url': '/login', "username": "alice@aristotle.example.com", "password": "Administrator"}
    :crop_element: div#dashboard-nav a[href="/account/admin"]
    
 2. Select "add workgroup"

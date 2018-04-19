@@ -11,7 +11,7 @@ First, go to your Dashboard sidepanel and select "Registrar Tools"
 .. screenshot::
    :server_path: /account/home
    :alt: Dashboard sidebar
-   :login: {'url': '/login', "username": "alice", "password": "Administrator"}
+   :login: {'url': '/login', "username": "alice@aristotle.example.com", "password": "Administrator"}
    :crop_element: nav[id="user_sidebar"]
    :crop_element_padding: 100,200
    :clicker: i[class="fa fa-institution fa-fw"]
