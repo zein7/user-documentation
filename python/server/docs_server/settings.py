@@ -44,6 +44,7 @@ PASSWORD_HASHERS = (
 ROOT_URLCONF = 'docs_server.urls'
 
 ARISTOTLE_SETTINGS['CONTENT_EXTENSIONS'] = ARISTOTLE_SETTINGS['CONTENT_EXTENSIONS'] + ['aristotle_mdr_links']
+ARISTOTLE_SETTINGS['MODULES'] = ARISTOTLE_SETTINGS['MODULES'] + ['aristotle_mdr.contrib.identifiers', 'aristotle_mdr.contrib.slots', 'aristotle_mdr.contrib.self_publish',]
 ARISTOTLE_SETTINGS['SITE_NAME'] = "My Registry"
 ARISTOTLE_SETTINGS['SITE_INTRO'] = "Use Aristotle Metadata Registry to search for metadata..."
 # ARISTOTLE_SETTINGS['SITE_BRAND'] =  '/aristotle_mdr/images/aristotle_small.png'
