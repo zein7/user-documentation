@@ -11,5 +11,7 @@ What is on My Dashboard?
    :maxdepth: 2
    :caption: Contents:
    
+   navigating_my_dashboard.rst
    my_sandbox.rst
    my_review_requests.rst
+   
