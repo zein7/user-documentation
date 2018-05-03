@@ -9,3 +9,4 @@ solar-theme
 sphinxcontrib-fulltoc
 sphinxcontrib-rawfiles
 git+git://github.com/LegoStormtroopr/sphinx-selenium-screenshots.git@develop
+-e ./python/docs_conf_and_theme
