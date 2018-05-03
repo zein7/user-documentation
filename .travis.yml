@@ -51,15 +51,18 @@ deploy:
 
   - provider: pages
     local_dir: docs/_build/html
-    repo: aristotle-mdr/user-documentation
+    repo: aristotle-mdr/published-documentation
+    target-branch: draft
     skip_cleanup: true
     github_token: $GITHUB_TOKEN # Set in travis-ci.org dashboard
     on:
       branch: draft
 
   - provider: pages
+    target-branch: 
     local_dir: docs/_build/html
     repo: aristotle-mdr/published-documentation
+    target-branch: published
     skip_cleanup: true
     github_token: $GITHUB_TOKEN # Set in travis-ci.org dashboard
     on:
