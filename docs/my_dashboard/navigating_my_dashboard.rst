@@ -8,7 +8,7 @@ This is your Dashboard, from here you can create, see notifications, and even co
    :alt: A basic search screen
    :login: {'url': '/login', "username": "vicky@aristotle.example.com", "password": "Viewer"}
    
-This if your Dashboard side panel. 
+This is your Dashboard side panel 
 
 .. screenshot::
    :server_path: /account/home
