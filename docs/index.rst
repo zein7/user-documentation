@@ -13,7 +13,6 @@ Below is a list of help topics available within this documentation. If you are u
    finding_content/index.rst
    features/index.rst
    users_roles/index.rst
-   dashboard.rst
    creating_and_editing/index.rst
    api/index.rst
    my_dashboard/index.rst
