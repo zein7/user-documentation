@@ -14,4 +14,4 @@ What is on My Dashboard?
    navigating_my_dashboard.rst
    my_sandbox.rst
    my_review_requests.rst
-   
+   how_to_delete_items_from_your_sandbox.rst
