@@ -6,13 +6,14 @@
 Searching for content
 =====================
 
+How to find things in the registry
+
 .. screenshot::
    :server_path: /search
    :alt: A basic search screen
    :crop: (0,0,900,465)
    
-
-Here are some results
+This is what the search page looks like. You can search for any content from here, and apply an applicable filter to help narrow your search results down 
 
 .. screenshot::
    :server_path: /search?q=person
