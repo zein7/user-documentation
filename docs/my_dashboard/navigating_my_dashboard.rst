@@ -40,4 +40,4 @@ Create different metadata items
    :server_path: /create
    :alt: Create metadata items
    :crop_element: div[class="col-sm-12 col-md-12"]
-   :crop_element_padding: 300,0,-600,300
+   :crop_element_padding: 0,0,-600,0
