@@ -18,12 +18,4 @@ All about finding stuff
    breaking_down_search_results.rst
 
 
-.. screenshot::
-   :server_path: /search
-   :alt: A basic search screen
 
-
-.. screenshot::
-   :server_path: /
-   :crop_element: a
-   :alt: A basic search screen
