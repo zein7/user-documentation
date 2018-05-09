@@ -36,3 +36,4 @@ To do this, select the items you want the bulk actions performed on. You can ind
    :server_path: /account/sandbox     
    :box: *[id="all_in_queryset"]
    
+   self.driver.execute_script("window.scrollTo(0,0);")  
