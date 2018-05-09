@@ -41,7 +41,9 @@ This is the form you will see when selecting to create an object class
       {'initial-name': 'Person', 'initial-definition': 'A human being.', '__submit__': False}  
       ]
       
-Because reuse is important, each wizard will search for the name of your item and give you results if there are any matching or similar to your item      
+Because reuse is important, each wizard will search for the name of your item and give you results if there are any matching or similar to your item. If you would like to create a new item, select the box "I've reviewed these items, and none of them meet my needs" and you will be able to save your new item.     
+    
+.. note:: You must tick the box that you've reviewed the items to move forward with the creation process      
         
 .. screenshot:: 
    :form_data: [
@@ -51,3 +53,4 @@ Because reuse is important, each wizard will search for the name of your item an
    import time
    time.sleep(2)
    
+Once you are done, select "save" and your item will be created
