@@ -4,16 +4,14 @@ verify_ssl = true
 name = "pypi"
 
 [dev-packages]
-user-documentation = {editable = true, path = "."}
 honcho = "*"
+aristotle-docs-server = {path = ".", editable = true}
 
 [packages]
 django = "~=1.11.11"
-aristotle-metadata-registry = "==2.1.1"
-
+aristotle-metadata-registry = "~=2.1.1"
 aristotle-cloud = {git = "https://github.com/aristotle-metadata-enterprises/aristotle-cloud", subdirectory = "python/aristotle-cloud", ref = "develop"}
 aristotle-bg-workers = {git = "https://github.com/aristotle-metadata-enterprises/aristotle-cloud", subdirectory = "python/aristotle-bg-workers", ref = "develop"}
-
 django-data-importer = {ref = "master", git = "https://github.com/LegoStormtroopr/django-data-importer"}
 
 [requires]
