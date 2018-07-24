@@ -1169,6 +1169,16 @@
 - model: aristotle_mdr.dataelementderivation
   pk: 40
   fields:
-    derivation_rule: ''
-    derives: [48]
-    inputs: [45]
+    derivation_rule: 'Hello'
+- model: aristotle_mdr.dedderivesthrough
+  pk: 1
+  fields:
+    data_element_derivation: 40
+    data_element: 45
+    order: 0
+- model: aristotle_mdr.dedinputsthrough
+  pk: 1
+  fields:
+    data_element_derivation: 40
+    data_element: 48
+    order: 0

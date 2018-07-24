@@ -49,24 +49,6 @@ ARISTOTLE_SETTINGS['SITE_NAME'] = "My Registry"
 ARISTOTLE_SETTINGS['SITE_INTRO'] = "Use Aristotle Metadata Registry to search for metadata..."
 # ARISTOTLE_SETTINGS['SITE_BRAND'] =  '/aristotle_mdr/images/aristotle_small.png'
 
-MIDDLEWARE = [
-    'aristotle_cloud.middleware.AllAllowedHostsHealthCheckerMiddleware',
-    # This screws us up
-    # 'aristotle_cloud.middleware.URLReloadMiddleware',
-    'django.middleware.security.SecurityMiddleware',
-    'corsheaders.middleware.CorsMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',
-    'django.contrib.sessions.middleware.SessionMiddleware',
-    'django.middleware.locale.LocaleMiddleware',
-    'django.middleware.common.CommonMiddleware',
-    'django.middleware.csrf.CsrfViewMiddleware',
-    'django.contrib.auth.middleware.AuthenticationMiddleware',
-    'django.contrib.messages.middleware.MessageMiddleware',
-    'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'aristotle_mdr.contrib.redirect.middleware.RedirectMiddleware',
-    'django_limits.middleware.LimitExceededMiddleware',
-    'easyaudit.middleware.easyaudit.EasyAuditMiddleware',
-]
-
+MIDDLEWARE.remove("aristotle_cloud.middleware.URLReloadMiddleware")
 
 SECURE_SSL_REDIRECT = False

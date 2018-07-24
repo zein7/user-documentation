@@ -1,7 +1,6 @@
 # Put in any argument to skip rebuilding the pipenv virtualenv
 
 mkdir /tmp/aristotle_docs -p
-export DATABASE_PATH=aristotle.db
 cd ./python/server
 cp server.env .env
 
