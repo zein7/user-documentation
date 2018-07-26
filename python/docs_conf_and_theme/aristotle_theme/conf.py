@@ -26,7 +26,7 @@ screenshots_server_path = "http://%s"% os.getenv('DOCS_SERVER_URL', 'http://0.0.
 screenshots_read_path = '/_static/screenshots'
 screenshots_save_path = os.path.abspath(os.path.join('.',screenshots_read_path[1:]))
 screenshots_logout_path = "/logout"
-screenshots_driver = os.getenv("SELENIUM_DRIVER", "selenium.webdriver.PhantomJS")
+screenshots_driver = os.getenv("SELENIUM_DRIVER", "selenium.webdriver.Chrome")
 
 # Clean up past screenshots
 filelist = [ f for f in os.listdir(screenshots_save_path) if f.endswith(".png") ]
