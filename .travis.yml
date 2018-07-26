@@ -12,7 +12,7 @@ python:
   - "3.6"
 
 install:
-  - pip install tox pipenv==11.9.0
+  - pip install tox pipenv==2018.7.1
 
 before_script:
   - wget http://chromedriver.storage.googleapis.com/2.35/chromedriver_linux64.zip
@@ -28,7 +28,7 @@ addons:
 script:
   - ./scripts/prepare_server.sh
   - ./scripts/start_server.sh
-  - pipenv install
+  - pipenv install .
   - pipenv run sphinx-build -aE -b html docs/ docs/_build/html/
   # - tox -e docs-strict
   # - tox -e docs-text-index
