@@ -3,16 +3,17 @@ How to Compare Two Items Together
 
 This "comparator" tool lets you compare two different metadata items together.
 
-To get started, go to your "Homepage", this is the page that you land on when logging into the system
+To get started, go to the "Homepage". If you are logged into the system, you can go to the
+the home page by clicking the site logo in the top left.
 
 .. screenshot::
-   :server_path: /
+   :server_path: /home
    :login: {'url': '/login', "username": "alice@aristotle.example.com", "password": "Administrator"}
    
 Once here, select "compare metadata" 
 
 .. screenshot::
-   :server_path: /
+   :server_path: /home
    :login: {'url': '/login', "username": "alice@aristotle.example.com", "password": "Administrator"}
    :box: a[href="/action/compare"]
    

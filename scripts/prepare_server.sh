@@ -5,7 +5,10 @@ cd ./python/server
 cp server.env .env
 
 if [[ $# -eq 0 ]]; then
+    echo "INSTALLING";
     pipenv install --three --dev --skip-lock
+else
+    echo "NOT INSTALLING!!";
 fi
 pipenv run django-admin createcachetable
 pipenv run django-admin migrate --noinput
