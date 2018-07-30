@@ -26,7 +26,7 @@ From here you can edit your account details
 .. screenshot::
    :server_path: /account/edit
    :alt: Edit details
-   :crop_element: div[class="col-sm-12 col-md-12"]
+   :crop_element: div[class="col-md-6"]
    
 Create different metadata items
 

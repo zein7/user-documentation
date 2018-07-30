@@ -34,7 +34,6 @@ From here, you can change when metadata items are publicly viewable and locked, 
    
 .. screenshot:: 
    :server_path: /registrationauthority/create
-   :box: div.admin-wrap button[type="Submit"]
    :form_data: [
       {'name': 'Test RA 1', 'definition': 'Test RA to show as example', '__submit__': True},
       ]
