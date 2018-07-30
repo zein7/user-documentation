@@ -19,7 +19,7 @@ to open the Actions menu, then select "Open item editor".
 .. screenshot:: 
    :server_path: /item/18
    :alt: A basic search screen
-   :login: {'url': '/login', "username": "suzie", "password": "Submitter"}
+   :login: {'url': '/login', "username": "suzie@aristotle.example.com", "password": "Submitter"}
    :clicker: i.fa-pencil-square-o
    :browser_height: 733
 

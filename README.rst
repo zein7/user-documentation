@@ -7,7 +7,7 @@ Aristotle User Documentation
 Previewing the registry
 -----------------------
 
-A preview registry is available at https://aristotle-user-doc.herokuapp.com/. This site is rebuidl everytime a change is made to this code and documentation.
+A preview registry is available at https://user-doc-2.herokuapp.com. This site is rebuild everytime a change is made to this code and documentation.
 
 User accounts for the site are available in this file: https://github.com/aristotle-mdr/user-documentation/blob/draft/server/fixtures/test_metadata.json
 

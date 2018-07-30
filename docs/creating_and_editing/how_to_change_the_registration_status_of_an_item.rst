@@ -6,7 +6,7 @@ To change the registration status of an item, go to the item page you want to ch
 .. screenshot::
    :server_path: /account/home
    :alt: An item page
-   :login: {'url': '/login', "username": "reggie", "password": "Registrar"}
+   :login: {'url': '/login', "username": "reggie@aristotle.example.com", "password": "Registrar"}
    :crop_element: nav[id="user_sidebar"]
    :crop_element_padding: 100,200
    :clicker: i[class="fa fa-institution fa-fw"]
@@ -23,7 +23,7 @@ The first way is to go to the "Action bar" and select the drop-down "Actions" an
 .. screenshot::
    :server_path: /item/47/dataelementconcept/employeelast-day-of-employment
    :crop_element: div[id="content"]
-   :crop_element_padding: 80,10,-450,-700
+   :crop_element_padding: 80,10,-350,-700
    :box: a[href="/action/changestatus/47"]
    
    browser.find_element_by_css_selector('.fa.fa-fw.fa-pencil-square-o').click() 
@@ -44,6 +44,5 @@ The second way to change the registration status on the item page, is to go into
 .. screenshot::
    :server_path: /item/47/dataelementconcept/employeelast-day-of-employment
    :crop_element: div[id="content"]
-   :crop_element_padding: 80,10,-450,-700
+   :crop_element_padding: 80,10,-350,-700
    :box: a[class="inline_action"]
-

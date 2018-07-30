@@ -49,3 +49,19 @@ Registry
 A running copy of Aristotle.
 
 *   **Administrator** - This is the person who can add, remove, and deactivate users. They can add and remove **workgroups**, **registration authorities**. The administrator can assign people to be **managers**, and they can carry out all the additional roles assigned to the different users of the **registry**. 
+
+Where to view your roles in the registry and in workgroups
+----------------------------------------------------------
+
+Go to you dashboard side panel and select "my roles"
+
+.. screenshot::
+   :server_path: /account/home
+   :login: {'url': '/login', "username": "stewie@aristotle.example.com", "password": "Steward"}
+   :clicker: i[class="fa fa-industry fa-fw"]
+   
+You will be taken to a page that shows all of your roles
+
+.. screenshot::
+   :server_path: /account/roles
+   :login: {'url': '/login', "username": "stewie@aristotle.example.com", "password": "Steward"}
