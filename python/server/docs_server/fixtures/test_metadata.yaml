@@ -1169,7 +1169,7 @@
 - model: aristotle_mdr.dataelementderivation
   pk: 40
   fields:
-    derivation_rule: 'Hello'
+    derivation_rule: 'A+B=C'
 - model: aristotle_mdr.dedderivesthrough
   pk: 1
   fields:
