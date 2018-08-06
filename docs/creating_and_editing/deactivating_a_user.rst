@@ -28,6 +28,4 @@ Pick the user you are deactivating and select the "manage" button next to their 
 You will then be prompted again if you are certain you want to deactivate the user or not
 
 In case you accidently deactivate the wrong user or simply want to reactivate the user again, you can reactivate them again,
-so there isn't a permanant deletion 
-   
-
+so there isn't a permanant deletion. 
