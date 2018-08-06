@@ -28,8 +28,9 @@ addons:
 script:
   - ./scripts/prepare_server.sh
   - ./scripts/start_server.sh
+  - cp builder.env .env
   - pipenv install .
-  - DOCS_SERVER_URL=127.0.0.1:8080 SELENIUM_DRIVER="selenium.webdriver.Chrome" pipenv run sphinx-build -aE -b html docs/ docs/_build/html/
+  - pipenv run sphinx-build -aE -b html docs/ docs/_build/html/
   # - tox -e docs-strict
   # - tox -e docs-text-index
   # - cp -r docs/_build/text/* docs/_build/html/_sources

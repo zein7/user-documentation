@@ -7,6 +7,7 @@ cp server.env .env
 if [[ $# -eq 0 ]]; then
     echo "INSTALLING";
     pipenv install --three --dev --skip-lock
+    pipenv graph
 else
     echo "NOT INSTALLING!!";
 fi

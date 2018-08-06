@@ -22,7 +22,8 @@ sys.path.insert(0, os.path.abspath('.'))
 sys.path.insert(0, os.path.abspath('..'))
 sys.path.insert(0, os.path.abspath('../python'))
 
-screenshots_server_path = "http://%s"% os.getenv('DOCS_SERVER_URL', 'http://0.0.0.0:8080')
+screenshots_server_path = os.getenv('DOCS_SERVER_URL', 'http://0.0.0.0:8080')
+print(screenshots_server_path)
 screenshots_read_path = '/_static/screenshots'
 screenshots_save_path = os.path.abspath(os.path.join('.',screenshots_read_path[1:]))
 screenshots_logout_path = "/logout"
