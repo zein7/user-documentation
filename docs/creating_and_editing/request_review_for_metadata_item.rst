@@ -16,6 +16,9 @@ but haven’t registered. Select one item you want to register, or select multip
 .. screenshot::
    :server_path: /account/sandbox
    :crop_element: form[action="/action/bulkaction?next=/account/sandbox"]
+   
+   import time
+   time.sleep(2)
 
 Ticking this box selects all of the items on the page.
    
