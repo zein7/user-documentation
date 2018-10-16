@@ -6,19 +6,11 @@ How to Create and Participate in Discussions
 How to Create a new Discussion within a Workgroup
 -------------------------------------------------
   
-Go to you Dashboard
+Go to you Dashboard from here, you can select "Discussions" from your side panel 
   
 .. screenshot::
    :server_path: /account/home
    :alt: My dashboard
-   :login: {'url': '/login', "username": "alice@aristotle.example.com", "password": "Administrator"}
-  
-From here, you can select "Discussions" from your side panel 
-  
-.. screenshot::
-   :server_path: /account/home
-   :alt: My dashboard
-   :login: {'url': '/login', "username": "alice@aristotle.example.com", "password": "Administrator"}
    :clicker: nav#user_sidebar a[href="/discussions"]
    :browser_height: 300
    
