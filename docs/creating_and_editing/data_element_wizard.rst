@@ -11,7 +11,7 @@ We are going to create a Data Element using a wizard. To start creating select "
 .. screenshot::
    :server_path: /create
    :alt: Create items page
-   :login: {'url': '/login', "username": "vicky@aristotle.example.com", "password": "Viewer"}
+   :login: {'url': '/login', "username": "alice@aristotle.example.com", "password": "Administrator"}
    :box: a[href="create/wizard/aristotle_mdr/dataelement"]
    :crop_element: a[href="create/wizard/aristotle_mdr/dataelement"]
    :crop_element_padding: 100,200
@@ -24,9 +24,9 @@ To proceed with creating a Date Element, it is required that you put in an Objec
 .. screenshot::
    :server_path: /create/wizard/aristotle_mdr/dataelement
    :alt: A basic search screen
-   :login: {'url': '/login', "username": "vicky@aristotle.example.com", "password": "Viewer"}
    :form_data: [
-      {'component_search-oc_name': 'Person', 'component_search-pr_name': 'Country of birth', '__submit__': True}
+      {'component_search-oc_name': 'Person', 'component_search-pr_name': 'Country of birth', 'component_search-vd_name': 'Code',
+      '__submit__': True}
       ]
 
 In step two, the wizard will show you results of different metadata items that have already been created. If you see a result that matches an item you need for creating the Data Element, you can select it and use it. If you get results that don't match or you just want to create something new, you have to select "None of the above meet my needs" to proceed with the process. 
@@ -36,6 +36,7 @@ In step two, the wizard will show you results of different metadata items that h
 We are going to be reusing the Object Class "person", and selecting "None of the above meet my needs" for the Value Domain.
 
 .. screenshot::
+   :server_path: /create/wizard/aristotle_mdr/dataelement
    :form_data: [
       {'component_search-oc_name': 'Person', 'component_search-pr_name': 'Country of birth', 'component_search-vd_name': 'Code', '__submit__': True},
       ]

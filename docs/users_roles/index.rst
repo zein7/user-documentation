@@ -53,13 +53,20 @@ A running copy of Aristotle.
 Where to view your roles in the registry and in workgroups
 ----------------------------------------------------------
 
-Go to you dashboard side panel and select "my roles"
+Go to you dashboard side panel and select "My Profile":
 
 .. screenshot::
    :server_path: /account/home
    :login: {'url': '/login', "username": "stewie@aristotle.example.com", "password": "Steward"}
-   :clicker: i[class="fa fa-industry fa-fw"]
+   :clicker: a[href="/account/profile"]
    
+In your profile, select "My Roles":
+
+.. screenshot::
+   :server_path: /account/profile
+   :login: {'url': '/login', "username": "stewie@aristotle.example.com", "password": "Steward"}
+   :clicker: a[href="/account/roles"]
+
 You will be taken to a page that shows all of your roles
 
 .. screenshot::

@@ -1,7 +1,7 @@
 ---
 -
   fields:
-    date_joined: "2016-05-02T22:23:10.627Z"
+    date_joined: "2018-05-02T22:23:10.627Z"
     email: possum@aristotle.example.com
     short_name: Possum
     is_active: true

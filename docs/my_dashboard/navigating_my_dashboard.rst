@@ -15,25 +15,25 @@ This is your Dashboard side panel
    :alt: Dashboard sidepanel
    :crop_element: nav[id="user_sidebar"]
    
-From here you can edit your account details    
+From here you can view your account details    
    
 .. screenshot::
    :server_path: /account/home
    :alt: Account details
-   :crop_element: li[class="dashboard_link active"]
-   :clicker: i[class="fa fa-cog fa-stack-1x fa-inverse"]
+   :crop_element: a[href="/account/profile"]
+   :clicker: a[href="/account/profile"]
    
 .. screenshot::
-   :server_path: /account/edit
-   :alt: Edit details
-   :crop_element: div[class="col-md-6"]
+   :server_path: /account/profile
+   :alt: View your profile
+   :crop_element: div#content>div.container
    
 Create different metadata items
 
 .. screenshot::
    :server_path: /account/home
    :alt: Create metadata
-   :crop_element: li[class="dashboard_link active"]
+   :crop_element: div#dashboard-nav a[href="/create"]
    :clicker: div#dashboard-nav a[href="/create"]
    
 .. screenshot::
