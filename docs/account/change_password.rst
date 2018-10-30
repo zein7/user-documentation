@@ -1,7 +1,7 @@
 How to reset your password
 ==========================
 
-.. attention:: This help page is for resetting your password while already logged into the system. If you have forgotten your password please use the "forgot password" on the login page of the system, it will help you step through retreiving your forgotten password. 
+.. attention:: This help page is for changing your password while already logged into the system. If you have forgotten your password please use the "forgot password" on the login page of the system, it will help you step through retreiving your forgotten password. 
 
 1. Go to "My profile" on the Dashboard side panel
 
