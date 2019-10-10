@@ -1,6 +1,8 @@
 How to Accept or Reject Review Requests
 =======================================
 
+.. index:: Review Request
+
 In this section we are going to run through the steps of how to accept or reject an item or items that have been submitted to
 an Administrator or Registrar for review.
 

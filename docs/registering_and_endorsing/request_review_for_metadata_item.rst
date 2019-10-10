@@ -1,6 +1,7 @@
-
 How to request your metadata item to be endorsed by a registrar
 ===============================================================
+
+.. index:: Review Request
 
 From the Dashboard side panel, go to "My Sandbox" to view all the items you've created that haven't been registered.
 

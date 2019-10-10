@@ -1,5 +1,5 @@
-Aristotle Metadata Registry User Documentation
-==============================================
+Aristotle Cloud User Documentation
+==================================
 
 Welcome to the documentation for the Aristotle Metadata Registry!
 
@@ -9,11 +9,14 @@ Below is a list of help topics available within this documentation. If you are u
    :maxdepth: 3
    :caption: Contents:
    
-   meta/index.rst
+   overview/index.rst
+   account/index.rst
    finding_content/index.rst
-   features/index.rst
-   users_roles/index.rst
    creating_and_editing/index.rst
+   content_discovery/index.rst
+   registering_and_endorsing/index.rst
+   collaboration_tools/index.rst
+   registry_administrator/index.rst
    api/index.rst
    my_dashboard/index.rst
 
@@ -22,6 +25,8 @@ Below is a list of help topics available within this documentation. If you are u
 
 Indices and tables
 ==================
+
+   full_index.rst
 
 * :ref:`genindex`
 * :ref:`modindex`

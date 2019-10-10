@@ -3,6 +3,7 @@
 mkdir /tmp/aristotle_docs -p
 cd ./python/server
 cp server.env .env
+pipenv install pip==18.0
 
 if [[ $# -eq 0 ]]; then
     echo "INSTALLING";

@@ -1,5 +1,5 @@
-How a User can Change Their Information
-=======================================
+Updating your profile
+=====================
 
 Go to "My Dashboard" and in the left side menu, and click "My Profile".
 

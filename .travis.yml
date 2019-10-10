@@ -15,11 +15,8 @@ install:
   - pip install tox pipenv==2018.7.1
 
 before_script:
-  - wget http://chromedriver.storage.googleapis.com/2.35/chromedriver_linux64.zip
-  - mkdir chromedriver
-  - unzip chromedriver_linux64.zip -d chromedriver
-  - export PATH=$PATH:$PWD/chromedriver
-  - google-chrome-stable --headless --disable-gpu --no-sandbox --remote-debugging-port=9222 http://localhost &
+  - sh ./scripts/get_chrome.sh
+  - sh ./scripts/start_chrome.sh
   - printf "machine github.com\nlogin legostormtroopr\npassword ${GITHUB_TOKEN}" > ~/.netrc
 
 addons:

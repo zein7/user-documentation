@@ -1,11 +1,11 @@
 How to assign a metadata item to a new Workgroup
 ================================================
 
-.. attention:: You will only be able to assign items to another Workgroup from the items current Workgroup if you're: 
+.. attention:: You will only be able to assign items to another Workgroup from the items current Workgroup if you: 
 
-    a. A member of the items current Workgroup, and the 
-       Workgroup you're moving the item to, and 
-    b. Have the necessary permissions to do so. 
+    a. Are a member of the Workgroup the item is currently in, and a member of the 
+       Workgroup you are moving the item to, and 
+    b. Have the necessary permissions to do so as specified by the Registry Administrator
     
 ------------------------------------------------------------------------
 
@@ -42,7 +42,7 @@ How to assign a metadata item to a new Workgroup
       browser.find_element_by_css_selector('a[data-target="#infobox_adv_edit"]').click()
 
       import time
-      time.sleep(2) 
+      time.sleep(3)
       
 3. Select Workgroup 
 
@@ -51,26 +51,26 @@ How to assign a metadata item to a new Workgroup
     .. screenshot::
       :alt:
       :crop_element: nav.main.navbar
-      :box: span[id="select2-id_workgroup-container"]
+      :box: select[name="workgroup"]+span.select2 span.select2-selection__arrow
       :crop_element_padding: 0,000,600,0
-      
+
+      browser.find_element_by_css_selector('select[name="workgroup"]+span.select2 span.select2-selection__arrow').click()
+
+      import time
+      time.sleep(3)
+
+
     The Workgroups you are a member of will appear in the drop-down for you to select from. 
 
     .. screenshot::
       :alt:
       :crop_element: nav.main.navbar
-      :crop_element_padding: 0,000,900,0
+      :crop_element_padding: 0,0,600,0
 
-      browser.find_element_by_css_selector('span[id="select2-id_workgroup-container"]').click()
+      browser.find_element_by_css_selector('span[class="select2-results"] ul li').click()
+
       
-4. Once done, select "Save Changes"
+4. Once done, click "Save Changes"
 
-    .. screenshot::
-      :alt:
-      :crop_element: nav.main.navbar
-      :box: input[value="Save changes"]
-      :crop_element_padding: 0,000,900,0
-      
-      browser.find_element_by_css_selector('').click()      
+    Once saved, the item will appear in the new Workgroup. 
 
-    The item will now appear in the new Workgroup. 

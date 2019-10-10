@@ -8,20 +8,15 @@ In this section
 
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 3
    :caption: Contents:
    
-   wizards.rst
-   editing_metadata_from_item_page.rst
-   data_element_wizard.rst
    adding_new_info_with_slots.rst
-   adding_a_new_user.rst
-   how_a_user_can_change_their_info.rst
-   how_to_add_a_workgroup.rst
-   request_review_for_metadata_item.rst
-   create_and_participate_in_discussions.rst
-   how_to_change_the_registration_status_of_an_item.rst
-   deactivating_a_user.rst
    comparing_two_items.rst
-   viewing_and_adding_registration_authorities.rst
-   accepting_or_rejecting_review_requests.rst
+   data_element_wizard.rst
+   editing_metadata_from_item_page.rst
+   how_to_add_custom_identifiers_to_metadata_items.rst
+   how_to_clone_a_metadata_item.rst
+   how_to_update_the_version_of_a_metadata_item.rst
+   wizards.rst
+   metadata/index.rst

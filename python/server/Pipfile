@@ -16,6 +16,7 @@ aristotle-metadata-registry = "~=2.1.1"
 aristotle-cloud = {git = "https://github.com/aristotle-metadata-enterprises/aristotle-cloud", subdirectory = "python/aristotle-cloud", ref = "master"}
 aristotle-bg-workers = {git = "https://github.com/aristotle-metadata-enterprises/aristotle-cloud", subdirectory = "python/aristotle-bg-workers", ref = "master"}
 django-data-importer = {ref = "master", git = "https://github.com/LegoStormtroopr/django-data-importer"}
+pip = "==18.0"
 
 [requires]
 python_version = "3.6"
