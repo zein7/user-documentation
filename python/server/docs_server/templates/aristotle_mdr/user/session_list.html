@@ -1,0 +1,27 @@
+{% load user_sessions i18n %}
+
+{% trans "<em>unknown on unknown</em>" as unknown_on_unknown %}
+{% trans "<em>unknown</em>" as unknown %}
+
+<table class="table">
+    <thead>
+      <tr>
+        <th>{% trans "Location" %}</th>
+        <th>{% trans "Device" %}</th>
+        <th>{% trans "Last Activity" %}</th>
+        <th>{% trans "End Session" %}</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="success">
+        <td>Canberra, Australia <small>(0.0.0.0)</small></td>
+        <td>Chrome / Windows</td>
+        <td>
+            2 hours ago (this session)
+        </td>
+        <td>
+          <button type="submit" class="btn btn-xs btn-danger">{% trans "End Session" %}</button>
+        </td>
+      </tr>
+    </tbody>
+</table>

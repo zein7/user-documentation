@@ -1,38 +1,32 @@
-.. Aristotle Metadata Registry User Documentation documentation master file, created by
-   sphinx-quickstart on Sat Mar 11 00:33:15 2017.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
+Aristotle Cloud User Documentation
+==================================
 
-Aristotle Metadata Registry User Documentation
-==============================================
+Welcome to the documentation for the Aristotle Metadata Registry!
 
-Welcome to Aristotle!
-
-.. screenshot::
-   :server_path: /
-   :alt: alternate text
-
-
-.. screenshot::
-   :server_path: http://google.com
-   :alt: alternate text
+Below is a list of help topics available within this documentation. If you are unsure of where to begin, start at :doc:`./meta/index` for help on how to read these help pages effectively.
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 3
    :caption: Contents:
    
-   meta/index.rst
+   overview/index.rst
+   account/index.rst
    finding_content/index.rst
-   help.rst
-   dashboard.rst
    creating_and_editing/index.rst
+   content_discovery/index.rst
+   registering_and_endorsing/index.rst
+   collaboration_tools/index.rst
+   registry_administrator/index.rst
    api/index.rst
+   my_dashboard/index.rst
 
 
 
 
 Indices and tables
 ==================
+
+   full_index.rst
 
 * :ref:`genindex`
 * :ref:`modindex`

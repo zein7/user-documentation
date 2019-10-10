@@ -15,14 +15,7 @@ All about finding stuff
    searching.rst
    browsing.rst
    item_page.rst
+   breaking_down_search_results.rst
 
 
-.. screenshot::
-   :server_path: /search
-   :alt: A basic search screen
 
-
-.. screenshot::
-   :server_path: /
-   :crop_element: a
-   :alt: A basic search screen

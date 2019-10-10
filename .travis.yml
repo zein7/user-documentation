@@ -1,27 +1,36 @@
 # Lets run on the new infrastructure
-sudo: false
+# sudo: false
+# dist: trusty
+
+# lets run on the old
+# sudo: required 
+dist: trusty
+group: deprecated-2017Q4
 
 language: python
 python:
-  - "2.7"
+  - "3.6"
 
 install:
-  - pip install tox
+  - pip install tox pipenv==2018.7.1
 
-# before_script:
-#   - "export DISPLAY=:99.0"
-#   - "sh -e /etc/init.d/xvfb start"
-#   - wget https://github.com/mozilla/geckodriver/releases/download/v0.11.1/geckodriver-v0.11.1-linux64.tar.gz
-#   - mkdir geckodriver
-#   - tar -xzf geckodriver-v0.11.1-linux64.tar.gz -C geckodriver
-#   - export PATH=$PATH:$PWD/geckodriver
-#   - sleep 1 # give xvfb some time to start
+before_script:
+  - sh ./scripts/get_chrome.sh
+  - sh ./scripts/start_chrome.sh
+  - printf "machine github.com\nlogin legostormtroopr\npassword ${GITHUB_TOKEN}" > ~/.netrc
+
+addons:
+  chrome: stable
 
 script:
   - ./scripts/prepare_server.sh
   - ./scripts/start_server.sh
-#  - SELENIUM_DRIVER="selenium.webdriver.Firefox" tox -e docs-strict
-  - tox -e docs-strict
+  - cp builder.env .env
+  - pipenv install .
+  - pipenv run sphinx-build -aE -b html docs/ docs/_build/html/
+  # - tox -e docs-strict
+  # - tox -e docs-text-index
+  # - cp -r docs/_build/text/* docs/_build/html/_sources
 
 after_script:
   - ./scripts/teardown_server.sh
@@ -30,9 +39,27 @@ after_failure:
   - cat server.log
 
 deploy:
-  provider: pages
-  local_dir: docs/_build/html
-  skip_cleanup: true
-  github_token: $GITHUB_TOKEN # Set in travis-ci.org dashboard
-  on:
-    branch: master
+  - provider: pages
+    local_dir: docs/_build/html
+    repo: aristotle-mdr/published-documentation
+    target-branch: draft
+    skip_cleanup: true
+    github_token: $GITHUB_TOKEN # Set in travis-ci.org dashboard
+    on:
+      branch: draft
+
+  - provider: pages
+    local_dir: docs/_build/html
+    repo: aristotle-mdr/published-documentation
+    target-branch: published
+    skip_cleanup: true
+    github_token: $GITHUB_TOKEN # Set in travis-ci.org dashboard
+    on:
+      branch: publish
+
+# addons:
+#   apt:
+#     sources:
+#       - google-chrome
+#     packages:
+#       - google-chrome-stable

@@ -19,7 +19,7 @@ to open the Actions menu, then select "Open item editor".
 .. screenshot:: 
    :server_path: /item/18
    :alt: A basic search screen
-   :login: {'url': '/login', "username": "suzie", "password": "Submitter"}
+   :login: {'url': '/login', "username": "suzie@aristotle.example.com", "password": "Submitter"}
    :clicker: i.fa-pencil-square-o
    :browser_height: 733
 
@@ -35,7 +35,7 @@ as shown below:
    browser.find_element_by_css_selector('a[href="/item/18/edit"][data-toggle="modal"]').click()
 
    import time
-   time.sleep(2)
+   time.sleep(8)
 
 Maximizing the metadata editor
 ------------------------------
@@ -48,7 +48,7 @@ the dialog to force the editor to take up the whole window.
    :clicker: a i.fa.fa-expand
 
 
-When exapnded, the editor now takes up the whole screen, as shown below:
+When expanded, the editor now takes up the whole screen, as shown below:
 
 .. screenshot:: 
    :server_path: /item/18/edit

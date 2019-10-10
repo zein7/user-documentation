@@ -1,0 +1,19 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+sphinx-autobuild = "*"
+solar-theme = "*"
+sphinxcontrib-fulltoc = "*"
+sphinxcontrib-rawfiles = "*"
+aristotle-docs-theme = {path = "./python/docs_conf_and_theme", editable = true}
+Pillow = "*"
+Sphinx = "~=2.2"
+sphinx_rtd_theme = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.7"
