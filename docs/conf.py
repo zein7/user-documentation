@@ -21,6 +21,7 @@ import sys
 sys.path.insert(0, os.path.abspath('.'))
 sys.path.insert(0, os.path.abspath('..'))
 sys.path.insert(0, os.path.abspath('../python'))
+sys.path.insert(0, os.path.abspath('./_py'))
 
 # screenshots_server_path = os.getenv('DOCS_SERVER_URL', 'http://0.0.0.0:8080')
 # print(screenshots_server_path)
@@ -47,9 +48,10 @@ extensions = [
     # 'sphinxcontrib.rawfiles',
     'sphinx.ext.todo',
     # 'selenium_screenshots.screener',
-    'clean_index.screen_ignorer',
+    'aristotle.screenshot_ignorer',
     'sphinxcontrib.fulltoc',
-    'clean_index.builder'
+    'clean_index.builder',
+    'aristotle.builder'
 ]
 
 # rawfiles = ['CNAME']
@@ -109,6 +111,8 @@ html_theme_path = ["_themes", ]
 import solar_theme
 
 html_theme = 'aristotle_theme'
+html_short_title = "Help"
+html_additional_pages = {'index': 'home.html'}
 
 # html_theme_path = [aristotle_theme.theme_path]
 # Theme options are theme-specific and customize the look and feel of a theme
